@@ -9,6 +9,8 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
+  private ConceptPresentation props_EmptyLine;
+  private ConceptPresentation props_FilledLine;
   private ConceptPresentation props_Img;
   private ConceptPresentation props_Line;
   private ConceptPresentation props_Text;
@@ -20,6 +22,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
+      case LanguageConceptSwitch.EmptyLine:
+        if (props_EmptyLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("empty");
+          props_EmptyLine = cpb.create();
+        }
+        return props_EmptyLine;
+      case LanguageConceptSwitch.FilledLine:
+        if (props_FilledLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("filledLine");
+          props_FilledLine = cpb.create();
+        }
+        return props_FilledLine;
       case LanguageConceptSwitch.Img:
         if (props_Img == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -30,7 +46,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Line:
         if (props_Line == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("line");
           props_Line = cpb.create();
         }
         return props_Line;

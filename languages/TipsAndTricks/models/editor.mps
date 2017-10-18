@@ -27,7 +27,12 @@
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
       </concept>
+      <concept id="1186414860679" name="jetbrains.mps.lang.editor.structure.EditableStyleClassItem" flags="ln" index="VPxyj" />
       <concept id="1186414928363" name="jetbrains.mps.lang.editor.structure.SelectableStyleSheetItem" flags="ln" index="VPM3Z" />
+      <concept id="1630016958697344083" name="jetbrains.mps.lang.editor.structure.IMenu_Concept" flags="ng" index="2ZABuq">
+        <reference id="6591946374543067572" name="conceptDeclaration" index="aqKnT" />
+      </concept>
+      <concept id="3308396621974580100" name="jetbrains.mps.lang.editor.structure.SubstituteMenu_Default" flags="ng" index="3p36aQ" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
         <property id="1140114345053" name="allowEmptyText" index="1O74Pk" />
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
@@ -262,12 +267,23 @@
       <node concept="l2Vlx" id="27J5nXqKR14" role="2iSdaV" />
     </node>
   </node>
-  <node concept="24kQdi" id="27J5nXqLqEU">
-    <ref role="1XX52x" to="zg9c:27J5nXqLqEI" resolve="Line" />
-    <node concept="3F0A7n" id="27J5nXqLqF7" role="2wV5jI">
-      <property role="1O74Pk" value="true" />
-      <ref role="1NtTu8" to="zg9c:27J5nXqLqEJ" resolve="value" />
+  <node concept="24kQdi" id="27J5nXqLzoQ">
+    <ref role="1XX52x" to="zg9c:27J5nXqLzoH" resolve="EmptyLine" />
+    <node concept="3F0ifn" id="27J5nXqLzoS" role="2wV5jI">
+      <property role="3F0ifm" value="" />
+      <node concept="VPxyj" id="27J5nXqLKVH" role="3F10Kt">
+        <property role="VOm3f" value="true" />
+      </node>
     </node>
+  </node>
+  <node concept="24kQdi" id="27J5nXqLzpb">
+    <ref role="1XX52x" to="zg9c:27J5nXqLzoW" resolve="FilledLine" />
+    <node concept="3F0A7n" id="27J5nXqLzpd" role="2wV5jI">
+      <ref role="1NtTu8" to="zg9c:27J5nXqLzp0" resolve="value" />
+    </node>
+  </node>
+  <node concept="3p36aQ" id="27J5nXqLCJl">
+    <ref role="aqKnT" to="zg9c:27J5nXqLzoH" resolve="EmptyLine" />
   </node>
 </model>
 

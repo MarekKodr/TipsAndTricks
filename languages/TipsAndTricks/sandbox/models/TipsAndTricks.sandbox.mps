@@ -7,7 +7,9 @@
   <imports />
   <registry>
     <language id="ff3ef785-6efd-437a-b0d5-407497433041" name="TipsAndTricks">
-      <concept id="2445196759413402286" name="TipsAndTricks.structure.Line" flags="ng" index="1VaFZh" />
+      <concept id="2445196759413438012" name="TipsAndTricks.structure.FilledLine" flags="ng" index="1Vaid3">
+        <property id="2445196759413438016" name="value" index="1VaicZ" />
+      </concept>
       <concept id="2445196759413256208" name="TipsAndTricks.structure.Img" flags="ng" index="1Vb6lJ" />
       <concept id="2445196759413256034" name="TipsAndTricks.structure.Text" flags="ng" index="1Vb7Ct">
         <child id="2445196759413402315" name="value" index="1VaFYO" />
@@ -27,12 +29,14 @@
     </language>
   </registry>
   <node concept="1Vb7Cv" id="27J5nXqKRK0">
-    <node concept="1Vb7Cu" id="27J5nXqLuE_" role="1Vb7E9">
-      <property role="TrG5h" value="d" />
-      <node concept="1Vb7Ct" id="27J5nXqLuEA" role="1Vb6lS">
-        <node concept="1VaFZh" id="27J5nXqLuGK" role="1VaFYO" />
+    <node concept="1Vb7Cu" id="27J5nXqLKTQ" role="1Vb7E9">
+      <property role="TrG5h" value="g" />
+      <node concept="1Vb7Ct" id="27J5nXqLKTR" role="1Vb6lS">
+        <node concept="1Vaid3" id="27J5nXqLRC6" role="1VaFYO">
+          <property role="1VaicZ" value="fsa" />
+        </node>
       </node>
-      <node concept="1Vb6lJ" id="27J5nXqLuEC" role="1Vb6lP" />
+      <node concept="1Vb6lJ" id="27J5nXqLKTT" role="1Vb6lP" />
     </node>
   </node>
 </model>

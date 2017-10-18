@@ -11,11 +11,11 @@ import jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole;
 import jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider;
 import jetbrains.mps.nodeEditor.EditorManager;
 
-/*package*/ class Line_EditorBuilder_a extends AbstractEditorBuilder {
+/*package*/ class FilledLine_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
   private SNode myNode;
 
-  public Line_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
+  public FilledLine_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
     super(context);
     myNode = node;
   }
@@ -27,14 +27,13 @@ import jetbrains.mps.nodeEditor.EditorManager;
   }
 
   /*package*/ EditorCell createCell() {
-    return createProperty_78ent8_a();
+    return createProperty_2v26jv_a();
   }
 
-  private EditorCell createProperty_78ent8_a() {
+  private EditorCell createProperty_2v26jv_a() {
     CellProviderWithRole provider = new PropertyCellProvider(myNode, getEditorContext());
     provider.setRole("value");
     provider.setNoTargetText("<no value>");
-    provider.setAllowsEmptyTarget(true);
     EditorCell editorCell;
     editorCell = provider.createEditorCell(getEditorContext());
     editorCell.setCellId("property_value");

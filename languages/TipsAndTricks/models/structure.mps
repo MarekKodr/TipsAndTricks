@@ -6,12 +6,15 @@
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
+    <import index="ctig" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:org.w3c.dom.html(JDK/)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
+        <property id="4628067390765956807" name="final" index="R5$K2" />
+        <property id="4628067390765956802" name="abstract" index="R5$K7" />
         <property id="5092175715804935370" name="conceptAlias" index="34LRSv" />
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
@@ -106,9 +109,23 @@
     <property role="EcuMT" value="2445196759413402286" />
     <property role="TrG5h" value="Line" />
     <property role="34LRSv" value="line" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyi" id="27J5nXqLqEJ" role="1TKVEl">
-      <property role="IQ2nx" value="2445196759413402287" />
+  </node>
+  <node concept="1TIwiD" id="27J5nXqLzoH">
+    <property role="EcuMT" value="2445196759413437997" />
+    <property role="TrG5h" value="EmptyLine" />
+    <property role="34LRSv" value="empty" />
+    <ref role="1TJDcQ" node="27J5nXqLqEI" resolve="Line" />
+  </node>
+  <node concept="1TIwiD" id="27J5nXqLzoW">
+    <property role="EcuMT" value="2445196759413438012" />
+    <property role="TrG5h" value="FilledLine" />
+    <property role="34LRSv" value="filledLine" />
+    <ref role="1TJDcQ" node="27J5nXqLqEI" resolve="Line" />
+    <node concept="1TJgyi" id="27J5nXqLzp0" role="1TKVEl">
+      <property role="IQ2nx" value="2445196759413438016" />
       <property role="TrG5h" value="value" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
