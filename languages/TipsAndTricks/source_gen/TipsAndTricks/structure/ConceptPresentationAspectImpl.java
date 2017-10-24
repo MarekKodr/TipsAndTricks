@@ -9,33 +9,17 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
-  private ConceptPresentation props_EmptyLine;
-  private ConceptPresentation props_FilledLine;
   private ConceptPresentation props_Img;
-  private ConceptPresentation props_Line;
   private ConceptPresentation props_Text;
   private ConceptPresentation props_Tip;
   private ConceptPresentation props_TipsAndTricks;
+  private ConceptPresentation props_TipsAndTricksText;
 
   @Override
   @Nullable
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
-      case LanguageConceptSwitch.EmptyLine:
-        if (props_EmptyLine == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("empty");
-          props_EmptyLine = cpb.create();
-        }
-        return props_EmptyLine;
-      case LanguageConceptSwitch.FilledLine:
-        if (props_FilledLine == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("filledLine");
-          props_FilledLine = cpb.create();
-        }
-        return props_FilledLine;
       case LanguageConceptSwitch.Img:
         if (props_Img == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -43,12 +27,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Img = cpb.create();
         }
         return props_Img;
-      case LanguageConceptSwitch.Line:
-        if (props_Line == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          props_Line = cpb.create();
-        }
-        return props_Line;
       case LanguageConceptSwitch.Text:
         if (props_Text == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -70,6 +48,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_TipsAndTricks = cpb.create();
         }
         return props_TipsAndTricks;
+      case LanguageConceptSwitch.TipsAndTricksText:
+        if (props_TipsAndTricksText == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("plain text");
+          cpb.rawPresentation("text");
+          props_TipsAndTricksText = cpb.create();
+        }
+        return props_TipsAndTricksText;
     }
     return null;
   }

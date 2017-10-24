@@ -9,23 +9,19 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
-  public static final int EmptyLine = 0;
-  public static final int FilledLine = 1;
-  public static final int Img = 2;
-  public static final int Line = 3;
-  public static final int Text = 4;
-  public static final int Tip = 5;
-  public static final int TipsAndTricks = 6;
+  public static final int Img = 0;
+  public static final int Text = 1;
+  public static final int Tip = 2;
+  public static final int TipsAndTricks = 3;
+  public static final int TipsAndTricksText = 4;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xff3ef7856efd437aL, 0xb0d5407497433041L);
-    builder.put(0x21ef157f5ac6362dL, EmptyLine);
-    builder.put(0x21ef157f5ac6363cL, FilledLine);
     builder.put(0x21ef157f5ac37010L, Img);
-    builder.put(0x21ef157f5ac5aaaeL, Line);
     builder.put(0x21ef157f5ac36f62L, Text);
     builder.put(0x21ef157f5ac36f61L, Tip);
     builder.put(0x21ef157f5ac36f60L, TipsAndTricks);
+    builder.put(0x3239547deb162856L, TipsAndTricksText);
     myIndex = builder.seal();
   }
 

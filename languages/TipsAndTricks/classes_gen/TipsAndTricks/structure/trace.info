@@ -2,13 +2,13 @@
 <debug-info version="2">
   <root>
     <file name="ConceptPresentationAspectImpl.java">
-      <unit at="11,0,77,0" name="TipsAndTricks.structure.ConceptPresentationAspectImpl" />
+      <unit at="11,0,63,0" name="TipsAndTricks.structure.ConceptPresentationAspectImpl" />
     </file>
     <file name="LanguageConceptSwitch.java">
-      <unit at="10,0,40,0" name="TipsAndTricks.structure.LanguageConceptSwitch" />
+      <unit at="10,0,36,0" name="TipsAndTricks.structure.LanguageConceptSwitch" />
     </file>
     <file name="StructureAspectDescriptor.java">
-      <unit at="14,0,119,0" name="TipsAndTricks.structure.StructureAspectDescriptor" />
+      <unit at="14,0,97,0" name="TipsAndTricks.structure.StructureAspectDescriptor" />
     </file>
   </root>
 </debug-info>
