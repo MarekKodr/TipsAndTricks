@@ -8,6 +8,7 @@
   <imports>
     <import index="zg9c" ref="r:e66c9c8c-6c32-4f44-bd9d-c18e84df8e56(TipsAndTricks.structure)" implicit="true" />
     <import index="iuxj" ref="r:64db3a92-5968-4a73-b456-34504a2d97a6(jetbrains.mps.core.xml.structure)" implicit="true" />
+    <import index="1oap" ref="r:03d44d4c-3d65-461c-9085-0f48e9569e59(jetbrains.mps.lang.resources.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
@@ -128,6 +129,26 @@
               <node concept="3TrcHB" id="2SHgtAv_HX9" role="2OqNvi">
                 <ref role="3TsBF5" to="iuxj:5M4a$b5iL2Q" resolve="tagName" />
               </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="13h7C7" id="6IXSjmE77It">
+    <ref role="13h7C2" to="zg9c:27J5nXqKR0g" resolve="Img" />
+    <node concept="13hLZK" id="6IXSjmE77Iu" role="13h7CW">
+      <node concept="3clFbS" id="6IXSjmE77Iv" role="2VODD2">
+        <node concept="3clFbF" id="6IXSjmE77ID" role="3cqZAp">
+          <node concept="2OqwBi" id="6IXSjmE79hR" role="3clFbG">
+            <node concept="2OqwBi" id="6IXSjmE77Y8" role="2Oq$k0">
+              <node concept="13iPFW" id="6IXSjmE77IC" role="2Oq$k0" />
+              <node concept="3TrEf2" id="6IXSjmE787S" role="2OqNvi">
+                <ref role="3Tt5mk" to="zg9c:2SHgtAv$gEn" resolve="source" />
+              </node>
+            </node>
+            <node concept="2DeJnY" id="6IXSjmE79GY" role="2OqNvi">
+              <ref role="1A9B2P" to="1oap:Ib_Fk7zNdB" resolve="Image" />
             </node>
           </node>
         </node>

@@ -56,6 +56,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.origin("r:e66c9c8c-6c32-4f44-bd9d-c18e84df8e56(TipsAndTricks.structure)/2445196759413256208");
     b.prop("value", 0x21ef157f5ac37011L, "2445196759413256209");
+    b.prop("width", 0x6bbde135aa1bfda5L, "7763608953260080549");
+    b.prop("height", 0x6bbde135aa1bfda8L, "7763608953260080552");
     b.aggregate("source", 0x2e2d41d99f910a97L).target(0x982eb8df2c964bd7L, 0x996311712ea622e5L, 0xb8b96b5078f3367L).optional(true).ordered(true).multiple(false).origin("3327388102637456023").done();
     b.alias("text");
     return b.create();

@@ -16,9 +16,7 @@
       </concept>
     </language>
     <language id="ff3ef785-6efd-437a-b0d5-407497433041" name="TipsAndTricks">
-      <concept id="3619016675360647254" name="TipsAndTricks.structure.TipsAndTricksText" flags="ng" index="3pbRKF">
-        <property id="3619016675360647255" name="value" index="3pbRKE" />
-      </concept>
+      <concept id="3619016675360647254" name="TipsAndTricks.structure.TipsAndTricksText" flags="ng" index="3pbRKF" />
       <concept id="2445196759413256208" name="TipsAndTricks.structure.Img" flags="ng" index="1Vb6lJ">
         <child id="3327388102637456023" name="source" index="2LJ4He" />
       </concept>
@@ -30,24 +28,21 @@
         <child id="2445196759413256182" name="tips" index="1Vb7E9" />
       </concept>
     </language>
-    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
-      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
-        <property id="1169194664001" name="name" index="TrG5h" />
-      </concept>
-    </language>
   </registry>
   <node concept="1Vb7Cv" id="27J5nXqKRK0">
-    <node concept="1Vb7Cu" id="38Tl7RF6iVe" role="1Vb7E9">
-      <property role="TrG5h" value="Enter" />
-      <node concept="3pbRKF" id="38Tl7RF6iVf" role="1Vb6lS">
-        <property role="3pbRKE" value="falnksnasg" />
-      </node>
-      <node concept="3pbRKF" id="38Tl7RF6_MZ" role="1Vb6lS">
-        <property role="3pbRKE" value="&quot;ENTER&quot; this is cool" />
-      </node>
-      <node concept="1Vb6lJ" id="38Tl7RF6iVg" role="1Vb6lP">
-        <node concept="c1ani" id="38Tl7RF6lpE" role="2LJ4He">
+    <node concept="1Vb7Cu" id="6IXSjmE7aJc" role="1Vb7E9">
+      <node concept="3pbRKF" id="6IXSjmE7aJd" role="1Vb6lS" />
+      <node concept="1Vb6lJ" id="6IXSjmE7aJe" role="1Vb6lP">
+        <node concept="c1ani" id="6IXSjmE7aJf" role="2LJ4He">
           <property role="c1ake" value="/Users/marek/MPSProjects/TipsAndTricks/languages/TipsAndTricks/src/pic1.png" />
+        </node>
+      </node>
+    </node>
+    <node concept="1Vb7Cu" id="6IXSjmE7fAe" role="1Vb7E9">
+      <node concept="3pbRKF" id="6IXSjmE7fAf" role="1Vb6lS" />
+      <node concept="1Vb6lJ" id="6IXSjmE7fAg" role="1Vb6lP">
+        <node concept="c1ani" id="6IXSjmE7fAh" role="2LJ4He">
+          <property role="c1ake" value="/Users/marek/MPSProjects/TipsAndTricks/languages/TipsAndTricks/src/donkey.png" />
         </node>
       </node>
     </node>
