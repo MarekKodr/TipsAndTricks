@@ -4,6 +4,7 @@
     <classNode dependClassName="TipsAndTricks.behavior.BehaviorAspectDescriptor" />
     <classNode dependClassName="TipsAndTricks.constraints.ConstraintsAspectDescriptor" />
     <classNode dependClassName="TipsAndTricks.editor.EditorAspectDescriptorImpl" />
+    <classNode dependClassName="TipsAndTricks.plugin.FacetAspectDescriptor" />
     <classNode dependClassName="TipsAndTricks.structure.ConceptPresentationAspectImpl" />
     <classNode dependClassName="TipsAndTricks.structure.StructureAspectDescriptor" />
     <classNode dependClassName="TipsAndTricks.typesystem.TypesystemDescriptor" />
@@ -20,6 +21,7 @@
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ConceptPresentationAspect" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ConstraintsAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ILanguageAspect" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.MakeAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.StructureAspectDescriptor" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SLanguage" />
     <classNode extendsClassName="jetbrains.mps.smodel.language.LanguageRuntime" />

@@ -2007,20 +2007,20 @@
                             <property role="Xl_RC" value="value" />
                           </node>
                           <node concept="1adDum" id="b3" role="37wK5m">
-                            <property role="1adDun" value="0x21ef157f5ac5aacbL" />
+                            <property role="1adDun" value="0x2e2d41d99f93cf6dL" />
                           </node>
                         </node>
                       </node>
                       <node concept="liA8E" id="aZ" role="2OqNvi">
                         <ref role="37wK5l" to="bzg8:~ConceptDescriptorBuilder2$AggregationLinkBuilder.target(long,long,long):jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2$AggregationLinkBuilder" resolve="target" />
                         <node concept="1adDum" id="b4" role="37wK5m">
-                          <property role="1adDun" value="0xff3ef7856efd437aL" />
+                          <property role="1adDun" value="0x479c7a8c02f943b5L" />
                         </node>
                         <node concept="1adDum" id="b5" role="37wK5m">
-                          <property role="1adDun" value="0xb0d5407497433041L" />
+                          <property role="1adDun" value="0x9139d910cb22f298L" />
                         </node>
                         <node concept="1adDum" id="b6" role="37wK5m">
-                          <property role="1adDun" value="0x21ef157f5ac5aaaeL" />
+                          <property role="1adDun" value="0x5c842a42c549486dL" />
                         </node>
                       </node>
                     </node>
@@ -2041,14 +2041,14 @@
                 <node concept="liA8E" id="aT" role="2OqNvi">
                   <ref role="37wK5l" to="bzg8:~ConceptDescriptorBuilder2$AggregationLinkBuilder.multiple(boolean):jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2$AggregationLinkBuilder" resolve="multiple" />
                   <node concept="3clFbT" id="b9" role="37wK5m">
-                    <property role="3clFbU" value="true" />
+                    <property role="3clFbU" value="false" />
                   </node>
                 </node>
               </node>
               <node concept="liA8E" id="aR" role="2OqNvi">
                 <ref role="37wK5l" to="bzg8:~ConceptDescriptorBuilder2$AggregationLinkBuilder.origin(java.lang.String):jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2$AggregationLinkBuilder" resolve="origin" />
                 <node concept="Xl_RD" id="ba" role="37wK5m">
-                  <property role="Xl_RC" value="2445196759413402315" />
+                  <property role="Xl_RC" value="3327388102637637485" />
                 </node>
               </node>
             </node>
@@ -2134,7 +2134,7 @@
                 <property role="3clFbU" value="false" />
               </node>
               <node concept="3clFbT" id="bF" role="37wK5m">
-                <property role="3clFbU" value="false" />
+                <property role="3clFbU" value="true" />
               </node>
             </node>
           </node>

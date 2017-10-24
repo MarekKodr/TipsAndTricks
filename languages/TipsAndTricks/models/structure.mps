@@ -11,6 +11,9 @@
     <import index="s5fb" ref="r:f51d1da3-b7ae-4ffa-81c1-3bf3a665f2dd(jetbrains.mps.editor.contextActionsTool.lang.menus.structure)" />
     <import index="tpc2" ref="r:00000000-0000-4000-0000-011c8959029e(jetbrains.mps.lang.editor.structure)" />
     <import index="3767" ref="r:7f24d329-a444-4288-af92-f8ef91dfd241(jetbrains.mps.lang.resources.behavior)" />
+    <import index="iuxj" ref="r:64db3a92-5968-4a73-b456-34504a2d97a6(jetbrains.mps.core.xml.structure)" />
+    <import index="tt0q" ref="r:ea884767-f424-4c97-a82e-eccd57dbc217(jetbrains.mps.core.xml.textGen)" />
+    <import index="gzph" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.psi.xml(MPS.IDEA/)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -66,6 +69,7 @@
     <property role="EcuMT" value="2445196759413256033" />
     <property role="TrG5h" value="Tip" />
     <property role="34LRSv" value="tip" />
+    <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="27J5nXqKR07" role="1TKVEi">
       <property role="IQ2ns" value="2445196759413256199" />
@@ -90,12 +94,12 @@
     <property role="TrG5h" value="Text" />
     <property role="34LRSv" value="text" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="27J5nXqLqFb" role="1TKVEi">
-      <property role="IQ2ns" value="2445196759413402315" />
+    <node concept="1TJgyj" id="2SHgtAv$WXH" role="1TKVEi">
+      <property role="IQ2ns" value="3327388102637637485" />
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="value" />
-      <property role="20lbJX" value="1..n" />
-      <ref role="20lvS9" node="27J5nXqLqEI" resolve="Line" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="iuxj:5M4a$b5ikxH" resolve="XmlBaseElement" />
     </node>
   </node>
   <node concept="1TIwiD" id="27J5nXqKR0g">

@@ -94,13 +94,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TipsAndTricks", "Text", 0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f62L);
     b.class_(false, false, false);
     b.origin("r:e66c9c8c-6c32-4f44-bd9d-c18e84df8e56(TipsAndTricks.structure)/2445196759413256034");
-    b.aggregate("value", 0x21ef157f5ac5aacbL).target(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac5aaaeL).optional(false).ordered(true).multiple(true).origin("2445196759413402315").done();
+    b.aggregate("value", 0x2e2d41d99f93cf6dL).target(0x479c7a8c02f943b5L, 0x9139d910cb22f298L, 0x5c842a42c549486dL).optional(false).ordered(true).multiple(false).origin("3327388102637637485").done();
     b.alias("text");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTip() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TipsAndTricks", "Tip", 0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L);
-    b.class_(false, false, false);
+    b.class_(false, false, true);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:e66c9c8c-6c32-4f44-bd9d-c18e84df8e56(TipsAndTricks.structure)/2445196759413256033");
     b.aggregate("text", 0x21ef157f5ac37007L).target(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f62L).optional(false).ordered(true).multiple(false).origin("2445196759413256199").done();
