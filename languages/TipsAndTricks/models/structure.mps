@@ -7,6 +7,10 @@
   </languages>
   <imports>
     <import index="ctig" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:org.w3c.dom.html(JDK/)" />
+    <import index="1oap" ref="r:03d44d4c-3d65-461c-9085-0f48e9569e59(jetbrains.mps.lang.resources.structure)" />
+    <import index="s5fb" ref="r:f51d1da3-b7ae-4ffa-81c1-3bf3a665f2dd(jetbrains.mps.editor.contextActionsTool.lang.menus.structure)" />
+    <import index="tpc2" ref="r:00000000-0000-4000-0000-011c8959029e(jetbrains.mps.lang.editor.structure)" />
+    <import index="3767" ref="r:7f24d329-a444-4288-af92-f8ef91dfd241(jetbrains.mps.lang.resources.behavior)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -103,6 +107,12 @@
       <property role="IQ2nx" value="2445196759413256209" />
       <property role="TrG5h" value="value" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyj" id="2SHgtAv$gEn" role="1TKVEi">
+      <property role="IQ2ns" value="3327388102637456023" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="source" />
+      <ref role="20lvS9" to="1oap:Ib_Fk7zNdB" resolve="Image" />
     </node>
   </node>
   <node concept="1TIwiD" id="27J5nXqLqEI">
