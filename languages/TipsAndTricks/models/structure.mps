@@ -56,20 +56,21 @@
   </registry>
   <node concept="1TIwiD" id="27J5nXqKQXw">
     <property role="EcuMT" value="2445196759413256032" />
-    <property role="TrG5h" value="TipsAndTricks" />
+    <property role="TrG5h" value="TT_Base" />
     <property role="19KtqR" value="true" />
+    <property role="34LRSv" value="TipsAndTricks" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="27J5nXqKQZQ" role="1TKVEi">
       <property role="IQ2ns" value="2445196759413256182" />
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="tips" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="27J5nXqKQXx" resolve="Tip" />
+      <ref role="20lvS9" node="27J5nXqKQXx" resolve="TT_Tip" />
     </node>
   </node>
   <node concept="1TIwiD" id="27J5nXqKQXx">
     <property role="EcuMT" value="2445196759413256033" />
-    <property role="TrG5h" value="Tip" />
+    <property role="TrG5h" value="TT_Tip" />
     <property role="34LRSv" value="tip" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
@@ -78,14 +79,14 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20lbJX" value="0..n" />
       <property role="20kJfa" value="text" />
-      <ref role="20lvS9" node="38Tl7RF5yxm" resolve="TipsAndTricksText" />
+      <ref role="20lvS9" node="38Tl7RF5yxm" resolve="TT_Text" />
     </node>
     <node concept="1TJgyj" id="27J5nXqKR0a" role="1TKVEi">
       <property role="IQ2ns" value="2445196759413256202" />
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="img" />
       <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="27J5nXqKR0g" resolve="Img" />
+      <ref role="20lvS9" node="27J5nXqKR0g" resolve="TT_Img" />
     </node>
     <node concept="PrWs8" id="27J5nXqKR1x" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -93,14 +94,9 @@
   </node>
   <node concept="1TIwiD" id="27J5nXqKR0g">
     <property role="EcuMT" value="2445196759413256208" />
-    <property role="TrG5h" value="Img" />
-    <property role="34LRSv" value="text" />
+    <property role="TrG5h" value="TT_Img" />
+    <property role="34LRSv" value="img" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyi" id="27J5nXqKR0h" role="1TKVEl">
-      <property role="IQ2nx" value="2445196759413256209" />
-      <property role="TrG5h" value="value" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
     <node concept="1TJgyi" id="6IXSjmE6ZQ_" role="1TKVEl">
       <property role="IQ2nx" value="7763608953260080549" />
       <property role="TrG5h" value="width" />
@@ -121,7 +117,7 @@
   <node concept="1TIwiD" id="38Tl7RF5yxm">
     <property role="EcuMT" value="3619016675360647254" />
     <property role="3GE5qa" value="" />
-    <property role="TrG5h" value="TipsAndTricksText" />
+    <property role="TrG5h" value="TT_Text" />
     <property role="34LRSv" value="text" />
     <property role="R4oN_" value="plain text" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
@@ -129,19 +125,6 @@
       <property role="IQ2nx" value="3619016675360647255" />
       <property role="TrG5h" value="value" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="27J5nXqKQXy">
-    <property role="EcuMT" value="2445196759413256034" />
-    <property role="TrG5h" value="Text" />
-    <property role="34LRSv" value="text" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="2SHgtAv$WXH" role="1TKVEi">
-      <property role="IQ2ns" value="3327388102637637485" />
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="value" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" to="iuxj:5M4a$b5ikxH" resolve="XmlBaseElement" />
     </node>
   </node>
 </model>

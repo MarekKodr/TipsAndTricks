@@ -17,19 +17,19 @@ import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
 
-public final class Tip__BehaviorDescriptor extends BaseBHDescriptor {
-  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L, "TipsAndTricks.structure.Tip");
+public final class TT_Tip__BehaviorDescriptor extends BaseBHDescriptor {
+  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L, "TipsAndTricks.structure.TT_Tip");
   private static final BehaviorRegistry REGISTRY = ConceptRegistry.getInstance().getBehaviorRegistry();
 
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList();
 
   private static void ___init___(@NotNull SNode __thisNode__) {
-    SNodeFactoryOperations.addNewChild(__thisNode__, MetaAdapterFactory.getContainmentLink(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L, 0x21ef157f5ac37007L, "text"), SNodeFactoryOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x3239547deb162856L, "TipsAndTricks.structure.TipsAndTricksText")));
+    SNodeFactoryOperations.addNewChild(__thisNode__, MetaAdapterFactory.getContainmentLink(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L, 0x21ef157f5ac37007L, "text"), SNodeFactoryOperations.asInstanceConcept(MetaAdapterFactory.getConcept(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x3239547deb162856L, "TipsAndTricks.structure.TT_Text")));
   }
 
 
-  /*package*/ Tip__BehaviorDescriptor() {
+  /*package*/ TT_Tip__BehaviorDescriptor() {
     super(REGISTRY);
   }
 

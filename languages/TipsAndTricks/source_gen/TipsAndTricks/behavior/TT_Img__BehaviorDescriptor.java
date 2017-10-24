@@ -17,8 +17,8 @@ import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
 
-public final class Img__BehaviorDescriptor extends BaseBHDescriptor {
-  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac37010L, "TipsAndTricks.structure.Img");
+public final class TT_Img__BehaviorDescriptor extends BaseBHDescriptor {
+  private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac37010L, "TipsAndTricks.structure.TT_Img");
   private static final BehaviorRegistry REGISTRY = ConceptRegistry.getInstance().getBehaviorRegistry();
 
 
@@ -29,7 +29,7 @@ public final class Img__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
 
-  /*package*/ Img__BehaviorDescriptor() {
+  /*package*/ TT_Img__BehaviorDescriptor() {
     super(REGISTRY);
   }
 

@@ -12,11 +12,10 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
-  /*package*/ final ConceptDescriptor myConceptImg = createDescriptorForImg();
-  /*package*/ final ConceptDescriptor myConceptText = createDescriptorForText();
-  /*package*/ final ConceptDescriptor myConceptTip = createDescriptorForTip();
-  /*package*/ final ConceptDescriptor myConceptTipsAndTricks = createDescriptorForTipsAndTricks();
-  /*package*/ final ConceptDescriptor myConceptTipsAndTricksText = createDescriptorForTipsAndTricksText();
+  /*package*/ final ConceptDescriptor myConceptTT_Base = createDescriptorForTT_Base();
+  /*package*/ final ConceptDescriptor myConceptTT_Img = createDescriptorForTT_Img();
+  /*package*/ final ConceptDescriptor myConceptTT_Text = createDescriptorForTT_Text();
+  /*package*/ final ConceptDescriptor myConceptTT_Tip = createDescriptorForTT_Tip();
   private final LanguageConceptSwitch myConceptIndex;
 
   public StructureAspectDescriptor() {
@@ -25,23 +24,21 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptImg, myConceptText, myConceptTip, myConceptTipsAndTricks, myConceptTipsAndTricksText);
+    return Arrays.asList(myConceptTT_Base, myConceptTT_Img, myConceptTT_Text, myConceptTT_Tip);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
     switch (myConceptIndex.index(id)) {
-      case LanguageConceptSwitch.Img:
-        return myConceptImg;
-      case LanguageConceptSwitch.Text:
-        return myConceptText;
-      case LanguageConceptSwitch.Tip:
-        return myConceptTip;
-      case LanguageConceptSwitch.TipsAndTricks:
-        return myConceptTipsAndTricks;
-      case LanguageConceptSwitch.TipsAndTricksText:
-        return myConceptTipsAndTricksText;
+      case LanguageConceptSwitch.TT_Base:
+        return myConceptTT_Base;
+      case LanguageConceptSwitch.TT_Img:
+        return myConceptTT_Img;
+      case LanguageConceptSwitch.TT_Text:
+        return myConceptTT_Text;
+      case LanguageConceptSwitch.TT_Tip:
+        return myConceptTT_Tip;
       default:
         return null;
     }
@@ -51,48 +48,40 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     return myConceptIndex.index(c);
   }
 
-  private static ConceptDescriptor createDescriptorForImg() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TipsAndTricks", "Img", 0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac37010L);
+  private static ConceptDescriptor createDescriptorForTT_Base() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TipsAndTricks", "TT_Base", 0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f60L);
+    b.class_(false, false, true);
+    b.origin("r:e66c9c8c-6c32-4f44-bd9d-c18e84df8e56(TipsAndTricks.structure)/2445196759413256032");
+    b.aggregate("tips", 0x21ef157f5ac36ff6L).target(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L).optional(true).ordered(true).multiple(true).origin("2445196759413256182").done();
+    b.alias("TipsAndTricks");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForTT_Img() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TipsAndTricks", "TT_Img", 0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac37010L);
     b.class_(false, false, false);
     b.origin("r:e66c9c8c-6c32-4f44-bd9d-c18e84df8e56(TipsAndTricks.structure)/2445196759413256208");
-    b.prop("value", 0x21ef157f5ac37011L, "2445196759413256209");
     b.prop("width", 0x6bbde135aa1bfda5L, "7763608953260080549");
     b.prop("height", 0x6bbde135aa1bfda8L, "7763608953260080552");
     b.aggregate("source", 0x2e2d41d99f910a97L).target(0x982eb8df2c964bd7L, 0x996311712ea622e5L, 0xb8b96b5078f3367L).optional(true).ordered(true).multiple(false).origin("3327388102637456023").done();
-    b.alias("text");
+    b.alias("img");
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForText() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TipsAndTricks", "Text", 0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f62L);
+  private static ConceptDescriptor createDescriptorForTT_Text() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TipsAndTricks", "TT_Text", 0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x3239547deb162856L);
     b.class_(false, false, false);
-    b.origin("r:e66c9c8c-6c32-4f44-bd9d-c18e84df8e56(TipsAndTricks.structure)/2445196759413256034");
-    b.aggregate("value", 0x2e2d41d99f93cf6dL).target(0x479c7a8c02f943b5L, 0x9139d910cb22f298L, 0x5c842a42c549486dL).optional(false).ordered(true).multiple(false).origin("3327388102637637485").done();
+    b.origin("r:e66c9c8c-6c32-4f44-bd9d-c18e84df8e56(TipsAndTricks.structure)/3619016675360647254");
+    b.prop("value", 0x3239547deb162857L, "3619016675360647255");
     b.alias("text");
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForTip() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TipsAndTricks", "Tip", 0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L);
+  private static ConceptDescriptor createDescriptorForTT_Tip() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TipsAndTricks", "TT_Tip", 0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L);
     b.class_(false, false, true);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:e66c9c8c-6c32-4f44-bd9d-c18e84df8e56(TipsAndTricks.structure)/2445196759413256033");
     b.aggregate("text", 0x21ef157f5ac37007L).target(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x3239547deb162856L).optional(true).ordered(true).multiple(true).origin("2445196759413256199").done();
     b.aggregate("img", 0x21ef157f5ac3700aL).target(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac37010L).optional(false).ordered(true).multiple(false).origin("2445196759413256202").done();
     b.alias("tip");
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForTipsAndTricks() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TipsAndTricks", "TipsAndTricks", 0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f60L);
-    b.class_(false, false, true);
-    b.origin("r:e66c9c8c-6c32-4f44-bd9d-c18e84df8e56(TipsAndTricks.structure)/2445196759413256032");
-    b.aggregate("tips", 0x21ef157f5ac36ff6L).target(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L).optional(true).ordered(true).multiple(true).origin("2445196759413256182").done();
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForTipsAndTricksText() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TipsAndTricks", "TipsAndTricksText", 0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x3239547deb162856L);
-    b.class_(false, false, false);
-    b.origin("r:e66c9c8c-6c32-4f44-bd9d-c18e84df8e56(TipsAndTricks.structure)/3619016675360647254");
-    b.prop("value", 0x3239547deb162857L, "3619016675360647255");
-    b.alias("text");
     return b.create();
   }
 }

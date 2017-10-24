@@ -12,26 +12,23 @@ import jetbrains.mps.lang.smodel.ConceptSwitchIndexBuilder;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor {
-  private final BHDescriptor myTip__BehaviorDescriptor = new Tip__BehaviorDescriptor();
-  private final BHDescriptor myText__BehaviorDescriptor = new Text__BehaviorDescriptor();
-  private final BHDescriptor myImg__BehaviorDescriptor = new Img__BehaviorDescriptor();
+  private final BHDescriptor myTT_Tip__BehaviorDescriptor = new TT_Tip__BehaviorDescriptor();
+  private final BHDescriptor myTT_Img__BehaviorDescriptor = new TT_Img__BehaviorDescriptor();
 
   public BehaviorAspectDescriptor() {
   }
 
   @Nullable
   public BHDescriptor getDescriptor(@NotNull SAbstractConcept concept) {
-    SAbstractConcept cncpt_a0g = concept;
-    switch (index_846f5o_a0g.index(cncpt_a0g)) {
+    SAbstractConcept cncpt_a0f = concept;
+    switch (index_846f5o_a0f.index(cncpt_a0f)) {
       case 0:
-        return myImg__BehaviorDescriptor;
+        return myTT_Img__BehaviorDescriptor;
       case 1:
-        return myText__BehaviorDescriptor;
-      case 2:
-        return myTip__BehaviorDescriptor;
+        return myTT_Tip__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex index_846f5o_a0g = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac37010L), MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f62L), MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L)).seal();
+  private static final ConceptSwitchIndex index_846f5o_a0f = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac37010L), MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L)).seal();
 }

@@ -9,53 +9,45 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
-  private ConceptPresentation props_Img;
-  private ConceptPresentation props_Text;
-  private ConceptPresentation props_Tip;
-  private ConceptPresentation props_TipsAndTricks;
-  private ConceptPresentation props_TipsAndTricksText;
+  private ConceptPresentation props_TT_Base;
+  private ConceptPresentation props_TT_Img;
+  private ConceptPresentation props_TT_Text;
+  private ConceptPresentation props_TT_Tip;
 
   @Override
   @Nullable
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
-      case LanguageConceptSwitch.Img:
-        if (props_Img == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("text");
-          props_Img = cpb.create();
-        }
-        return props_Img;
-      case LanguageConceptSwitch.Text:
-        if (props_Text == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("text");
-          props_Text = cpb.create();
-        }
-        return props_Text;
-      case LanguageConceptSwitch.Tip:
-        if (props_Tip == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_Tip = cpb.create();
-        }
-        return props_Tip;
-      case LanguageConceptSwitch.TipsAndTricks:
-        if (props_TipsAndTricks == null) {
+      case LanguageConceptSwitch.TT_Base:
+        if (props_TT_Base == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.rawPresentation("TipsAndTricks");
-          props_TipsAndTricks = cpb.create();
+          props_TT_Base = cpb.create();
         }
-        return props_TipsAndTricks;
-      case LanguageConceptSwitch.TipsAndTricksText:
-        if (props_TipsAndTricksText == null) {
+        return props_TT_Base;
+      case LanguageConceptSwitch.TT_Img:
+        if (props_TT_Img == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("img");
+          props_TT_Img = cpb.create();
+        }
+        return props_TT_Img;
+      case LanguageConceptSwitch.TT_Text:
+        if (props_TT_Text == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("plain text");
           cpb.rawPresentation("text");
-          props_TipsAndTricksText = cpb.create();
+          props_TT_Text = cpb.create();
         }
-        return props_TipsAndTricksText;
+        return props_TT_Text;
+      case LanguageConceptSwitch.TT_Tip:
+        if (props_TT_Tip == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_TT_Tip = cpb.create();
+        }
+        return props_TT_Tip;
     }
     return null;
   }
