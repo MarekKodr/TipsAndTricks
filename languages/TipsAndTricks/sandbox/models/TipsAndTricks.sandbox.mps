@@ -16,19 +16,19 @@
       </concept>
     </language>
     <language id="ff3ef785-6efd-437a-b0d5-407497433041" name="TipsAndTricks">
-      <concept id="3619016675360647254" name="TipsAndTricks.structure.TipsAndTricksText" flags="ng" index="3pbRKF">
+      <concept id="3619016675360647254" name="TipsAndTricks.structure.TT_Text" flags="ng" index="3pbRKF">
         <property id="3619016675360647255" name="value" index="3pbRKE" />
       </concept>
-      <concept id="2445196759413256208" name="TipsAndTricks.structure.Img" flags="ng" index="1Vb6lJ">
+      <concept id="2445196759413256208" name="TipsAndTricks.structure.TT_Img" flags="ng" index="1Vb6lJ">
         <property id="7763608953260080549" name="width" index="31DxMg" />
         <property id="7763608953260080552" name="height" index="31DxMt" />
         <child id="3327388102637456023" name="source" index="2LJ4He" />
       </concept>
-      <concept id="2445196759413256033" name="TipsAndTricks.structure.Tip" flags="ng" index="1Vb7Cu">
+      <concept id="2445196759413256033" name="TipsAndTricks.structure.TT_Tip" flags="ng" index="1Vb7Cu">
         <child id="2445196759413256202" name="img" index="1Vb6lP" />
         <child id="2445196759413256199" name="text" index="1Vb6lS" />
       </concept>
-      <concept id="2445196759413256032" name="TipsAndTricks.structure.TipsAndTricks" flags="ng" index="1Vb7Cv">
+      <concept id="2445196759413256032" name="TipsAndTricks.structure.TT_Base" flags="ng" index="1Vb7Cv">
         <child id="2445196759413256182" name="tips" index="1Vb7E9" />
       </concept>
     </language>
@@ -40,7 +40,7 @@
   </registry>
   <node concept="1Vb7Cv" id="27J5nXqKRK0">
     <node concept="1Vb7Cu" id="6IXSjmE7aJc" role="1Vb7E9">
-      <property role="TrG5h" value="tips" />
+      <property role="TrG5h" value="Tips" />
       <node concept="3pbRKF" id="6IXSjmE7aJd" role="1Vb6lS">
         <property role="3pbRKE" value="cool text " />
       </node>

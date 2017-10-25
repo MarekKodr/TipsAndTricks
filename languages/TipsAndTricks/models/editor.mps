@@ -7,6 +7,7 @@
   </languages>
   <imports>
     <import index="zg9c" ref="r:e66c9c8c-6c32-4f44-bd9d-c18e84df8e56(TipsAndTricks.structure)" implicit="true" />
+    <import index="tpch" ref="r:00000000-0000-4000-0000-011c8959028d(jetbrains.mps.lang.structure.editor)" implicit="true" />
     <import index="1oap" ref="r:03d44d4c-3d65-461c-9085-0f48e9569e59(jetbrains.mps.lang.resources.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
@@ -29,6 +30,9 @@
         <property id="1186414551515" name="flag" index="VOm3f" />
       </concept>
       <concept id="1186414928363" name="jetbrains.mps.lang.editor.structure.SelectableStyleSheetItem" flags="ln" index="VPM3Z" />
+      <concept id="1381004262292414836" name="jetbrains.mps.lang.editor.structure.ICellStyle" flags="ng" index="1k5N5V">
+        <reference id="1381004262292426837" name="parentStyleClass" index="1k5W1q" />
+      </concept>
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
         <property id="1214560368769" name="emptyNoTargetText" index="39s7Ar" />
         <property id="1140114345053" name="allowEmptyText" index="1O74Pk" />
@@ -109,6 +113,7 @@
     <node concept="3EZMnI" id="27J5nXqKSuN" role="2wV5jI">
       <node concept="3F0ifn" id="27J5nXqLjWD" role="3EZMnx">
         <property role="3F0ifm" value="Tips:" />
+        <ref role="1k5W1q" to="tpch:24YP6ZDyde4" resolve="Keyword" />
       </node>
       <node concept="3F0ifn" id="27J5nXqLleF" role="3EZMnx">
         <node concept="pVoyu" id="27J5nXqLleV" role="3F10Kt">
@@ -254,6 +259,37 @@
             </node>
           </node>
         </node>
+        <node concept="3F0ifn" id="6IXSjmE8$eT" role="3EZMnx">
+          <node concept="pVoyu" id="6IXSjmE8$qH" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="pkWqt" id="6IXSjmE8CB3" role="pqm2j">
+            <node concept="3clFbS" id="6IXSjmE8CB4" role="2VODD2">
+              <node concept="3clFbF" id="6IXSjmE8CIc" role="3cqZAp">
+                <node concept="3y3z36" id="6IXSjmE8CId" role="3clFbG">
+                  <node concept="pncrf" id="6IXSjmE8CIe" role="3uHU7w" />
+                  <node concept="2OqwBi" id="6IXSjmE8CIf" role="3uHU7B">
+                    <node concept="2OqwBi" id="6IXSjmE8CIg" role="2Oq$k0">
+                      <node concept="1PxgMI" id="6IXSjmE8CIh" role="2Oq$k0">
+                        <node concept="chp4Y" id="6IXSjmE8CIi" role="3oSUPX">
+                          <ref role="cht4Q" to="zg9c:27J5nXqKQXw" resolve="TT_Base" />
+                        </node>
+                        <node concept="2OqwBi" id="6IXSjmE8CIj" role="1m5AlR">
+                          <node concept="pncrf" id="6IXSjmE8CIk" role="2Oq$k0" />
+                          <node concept="1mfA1w" id="6IXSjmE8CIl" role="2OqNvi" />
+                        </node>
+                      </node>
+                      <node concept="3Tsc0h" id="6IXSjmE8CIm" role="2OqNvi">
+                        <ref role="3TtcxE" to="zg9c:27J5nXqKQZQ" resolve="tips" />
+                      </node>
+                    </node>
+                    <node concept="1uHKPH" id="6IXSjmE8CIn" role="2OqNvi" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3F0ifn" id="27J5nXqKR1b" role="3EZMnx">
           <property role="3F0ifm" value="name:" />
           <node concept="pVoyu" id="27J5nXqKTg1" role="3F10Kt">
@@ -330,8 +366,8 @@
     <property role="3GE5qa" value="" />
     <ref role="1XX52x" to="zg9c:38Tl7RF5yxm" resolve="TT_Text" />
     <node concept="3F0A7n" id="38Tl7RF5yx$" role="2wV5jI">
-      <property role="39s7Ar" value="true" />
       <property role="1O74Pk" value="true" />
+      <property role="39s7Ar" value="true" />
       <ref role="1NtTu8" to="zg9c:38Tl7RF5yxn" resolve="value" />
     </node>
   </node>

@@ -1,6 +1,6 @@
 <idea-plugin>
   <extensions defaultExtensionNs="com.intellij">
-    <tipAndTrick name="tips.html"></tipAndTrick>
+    <tipAndTrick name="Tips.html"></tipAndTrick>
     <tipAndTrick name="tip2.html"></tipAndTrick>
   </extensions>
 </idea-plugin>

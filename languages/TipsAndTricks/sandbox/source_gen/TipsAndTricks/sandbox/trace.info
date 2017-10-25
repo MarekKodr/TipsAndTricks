@@ -4,11 +4,11 @@
     <file name="IdeTipsAndTricks.xml">
       <unit id="2445196759413259264" at="1,0,6,14" name="TipsAndTricks.sandbox.IdeTipsAndTricks" />
     </file>
-    <file name="tip2.html.xml">
-      <unit id="7763608953260145038" at="1,0,16,7" name="TipsAndTricks.sandbox.tip2$html" />
+    <file name="Tips.html.xml">
+      <unit id="7763608953260125132" at="1,0,19,7" name="TipsAndTricks.sandbox.Tips$html" />
     </file>
-    <file name="tips.html.xml">
-      <unit id="7763608953260125132" at="1,0,22,7" name="TipsAndTricks.sandbox.tips$html" />
+    <file name="tip2.html.xml">
+      <unit id="7763608953260145038" at="1,0,14,7" name="TipsAndTricks.sandbox.tip2$html" />
     </file>
   </root>
 </debug-info>

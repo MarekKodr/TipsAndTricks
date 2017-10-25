@@ -17,8 +17,199 @@
       <unit at="8,0,18,0" name="TipsAndTricks.plugin.FacetAspectDescriptor" />
     </file>
     <file name="FacetManifest.java">
-      <unit at="21,55,25,5" name="TipsAndTricks.plugin.FacetManifest$1" />
-      <unit at="12,0,28,0" name="TipsAndTricks.plugin.FacetManifest" />
+      <unit at="22,55,26,5" name="TipsAndTricks.plugin.FacetManifest$1" />
+      <unit at="12,0,29,0" name="TipsAndTricks.plugin.FacetManifest" />
+    </file>
+  </root>
+  <root nodeRef="r:00362b16-9c73-44b4-a481-2cb27df76221(TipsAndTricks.plugin)/4079842169098524373">
+    <file name="XCreateJar_Facet.java">
+      <node id="4079842169098524373" at="34,0,35,0" concept="9" trace="LOG" />
+      <node id="4079842169098524373" at="35,0,36,0" concept="2" trace="targets" />
+      <node id="4079842169098524373" at="36,0,37,0" concept="2" trace="name" />
+      <node id="4079842169098524373" at="37,29,38,83" concept="1" />
+      <node id="4079842169098524373" at="40,38,41,19" concept="7" />
+      <node id="4079842169098524373" at="43,43,44,16" concept="7" />
+      <node id="4079842169098524373" at="46,43,47,204" concept="7" />
+      <node id="4079842169098524373" at="49,43,50,16" concept="7" />
+      <node id="4079842169098524373" at="52,32,53,21" concept="7" />
+      <node id="4079842169098524373" at="55,57,56,51" concept="7" />
+      <node id="4079842169098524376" at="59,0,60,0" concept="9" trace="name" />
+      <node id="4079842169098524380" at="65,173,66,56" concept="6" />
+      <node id="4079842169098524380" at="66,56,67,86" concept="6" />
+      <node id="4079842169098524384" at="70,48,71,62" concept="6" />
+      <node id="4079842169098524415" at="76,64,77,36" concept="1" />
+      <node id="4079842169098524418" at="77,36,78,57" concept="7" />
+      <node id="4079842169098524429" at="82,61,83,36" concept="1" />
+      <node id="4079842169098524432" at="83,36,84,54" concept="7" />
+      <node id="4079842169098683236" at="86,60,87,53" concept="6" />
+      <node id="4079842169098529751" at="88,57,89,127" concept="1" />
+      <node id="4079842169098680817" at="90,25,91,0" concept="8" />
+      <node id="4079842169098524380" at="97,20,98,37" concept="1" />
+      <node id="4079842169098524380" at="98,37,99,61" concept="7" />
+      <node id="4079842169098524376" at="104,35,105,18" concept="7" />
+      <node id="4079842169098524376" at="107,46,108,18" concept="7" />
+      <node id="4079842169098524376" at="110,43,111,114" concept="7" />
+      <node id="4079842169098524376" at="113,47,114,18" concept="7" />
+      <node id="4079842169098524376" at="116,44,117,109" concept="7" />
+      <node id="4079842169098524376" at="119,35,120,18" concept="7" />
+      <node id="4079842169098524376" at="122,33,123,19" concept="7" />
+      <node id="4079842169098524376" at="125,36,126,18" concept="7" />
+      <node id="4079842169098524376" at="128,37,129,18" concept="7" />
+      <node id="4079842169098524376" at="131,65,132,111" concept="6" />
+      <node id="4079842169098524376" at="132,111,133,60" concept="1" />
+      <node id="4079842169098524376" at="133,60,134,16" concept="7" />
+      <node id="4079842169098524376" at="136,66,137,18" concept="7" />
+      <node id="4079842169098524376" at="139,49,140,18" concept="7" />
+      <node id="4079842169098524376" at="142,61,143,34" concept="6" />
+      <node id="4079842169098524376" at="143,34,144,15" concept="7" />
+      <node id="4079842169098524376" at="60,0,62,0" concept="0" trace="Target_doJar#()V" />
+      <node id="4079842169098524373" at="148,0,150,0" concept="0" trace="TargetProperties#()V" />
+      <node id="4079842169098524373" at="150,0,152,0" concept="5" trace="storeValues#(Ljava/util/Map;Ljetbrains/mps/make/script/IPropertiesPool;)V" />
+      <node id="4079842169098524373" at="37,0,40,0" concept="0" trace="XCreateJar_Facet#()V" />
+      <node id="4079842169098524373" at="40,0,43,0" concept="5" trace="targets#()Ljava/lang/Iterable;" />
+      <node id="4079842169098524373" at="43,0,46,0" concept="5" trace="optional#()Ljava/lang/Iterable;" />
+      <node id="4079842169098524373" at="46,0,49,0" concept="5" trace="required#()Ljava/lang/Iterable;" />
+      <node id="4079842169098524373" at="49,0,52,0" concept="5" trace="extended#()Ljava/lang/Iterable;" />
+      <node id="4079842169098524373" at="52,0,55,0" concept="5" trace="getName#()Ljetbrains/mps/make/facet/IFacet/Name;" />
+      <node id="4079842169098524373" at="55,0,58,0" concept="5" trace="propertiesPersistence#()Ljetbrains/mps/make/resources/IPropertiesPersistence;" />
+      <node id="4079842169098683242" at="87,53,90,25" concept="4" />
+      <node id="4079842169098524376" at="104,0,107,0" concept="5" trace="createConfig#()Ljetbrains/mps/make/script/IConfig;" />
+      <node id="4079842169098524376" at="107,0,110,0" concept="5" trace="notAfter#()Ljava/lang/Iterable;" />
+      <node id="4079842169098524376" at="110,0,113,0" concept="5" trace="after#()Ljava/lang/Iterable;" />
+      <node id="4079842169098524376" at="113,0,116,0" concept="5" trace="notBefore#()Ljava/lang/Iterable;" />
+      <node id="4079842169098524376" at="116,0,119,0" concept="5" trace="before#()Ljava/lang/Iterable;" />
+      <node id="4079842169098524376" at="119,0,122,0" concept="5" trace="getName#()Ljetbrains/mps/make/facet/ITarget/Name;" />
+      <node id="4079842169098524376" at="122,0,125,0" concept="5" trace="isOptional#()Z" />
+      <node id="4079842169098524376" at="125,0,128,0" concept="5" trace="requiresInput#()Z" />
+      <node id="4079842169098524376" at="128,0,131,0" concept="5" trace="producesOutput#()Z" />
+      <node id="4079842169098524376" at="136,0,139,0" concept="5" trace="expectedOutput#()Ljava/lang/Iterable;" />
+      <node id="4079842169098524376" at="139,0,142,0" concept="5" trace="createParameters#(Ljava/lang/Class;)null" />
+      <node id="4079842169098524373" at="152,83,155,7" concept="11" />
+      <node id="4079842169098524376" at="142,0,146,0" concept="5" trace="createParameters#(Ljava/lang/Class;null)null" />
+      <node id="4079842169098524409" at="75,0,80,0" concept="5" trace="acceptWritten#(Ljetbrains/mps/vfs/IFile;)Z" />
+      <node id="4079842169098524423" at="81,0,86,0" concept="5" trace="acceptKept#(Ljetbrains/mps/vfs/IFile;)Z" />
+      <node id="4079842169098524376" at="131,0,136,0" concept="5" trace="expectedInput#()Ljava/lang/Iterable;" />
+      <node id="4079842169098524373" at="152,0,157,0" concept="5" trace="loadValues#(Ljava/util/Map;Ljetbrains/mps/make/script/IPropertiesPool;)V" />
+      <node id="4079842169098524436" at="86,0,93,0" concept="5" trace="doJar#(Ljetbrains/mps/vfs/IFile;)V" />
+      <node id="4079842169098524397" at="73,37,93,23" concept="1" />
+      <node id="4079842169098524395" at="73,0,95,0" concept="5" trace="run#()V" />
+      <node id="4079842169098524391" at="71,62,95,19" concept="1" />
+      <node id="4079842169098524382" at="69,19,96,15" concept="3" />
+      <node id="4079842169098524380" at="67,86,100,11" concept="10" />
+      <node id="4079842169098524380" at="64,0,102,0" concept="5" trace="execute#(Ljava/lang/Iterable;Ljetbrains/mps/make/script/IJobMonitor;Ljetbrains/mps/make/resources/IPropertiesAccessor;Lorg/jetbrains/mps/openapi/util/ProgressMonitor;)Ljetbrains/mps/make/script/IResult;" />
+      <node id="4079842169098524376" at="62,29,102,8" concept="7" />
+      <node id="4079842169098524376" at="62,0,104,0" concept="5" trace="createJob#()Ljetbrains/mps/make/script/IJob;" />
+      <scope id="4079842169098524376" at="60,27,60,27" />
+      <scope id="4079842169098524373" at="148,31,148,31" />
+      <scope id="4079842169098524373" at="150,84,150,84" />
+      <scope id="4079842169098524373" at="153,11,153,11" />
+      <scope id="4079842169098524373" at="154,0,154,37">
+        <var name="re" id="4079842169098524373" />
+      </scope>
+      <scope id="4079842169098524373" at="154,37,154,37" />
+      <scope id="4079842169098524373" at="37,29,38,83" />
+      <scope id="4079842169098524373" at="40,38,41,19" />
+      <scope id="4079842169098524373" at="43,43,44,16" />
+      <scope id="4079842169098524373" at="46,43,47,204" />
+      <scope id="4079842169098524373" at="49,43,50,16" />
+      <scope id="4079842169098524373" at="52,32,53,21" />
+      <scope id="4079842169098524373" at="55,57,56,51" />
+      <scope id="4079842169098683243" at="88,57,89,127" />
+      <scope id="4079842169098524376" at="104,35,105,18" />
+      <scope id="4079842169098524376" at="107,46,108,18" />
+      <scope id="4079842169098524376" at="110,43,111,114" />
+      <scope id="4079842169098524376" at="113,47,114,18" />
+      <scope id="4079842169098524376" at="116,44,117,109" />
+      <scope id="4079842169098524376" at="119,35,120,18" />
+      <scope id="4079842169098524376" at="122,33,123,19" />
+      <scope id="4079842169098524376" at="125,36,126,18" />
+      <scope id="4079842169098524376" at="128,37,129,18" />
+      <scope id="4079842169098524376" at="136,66,137,18" />
+      <scope id="4079842169098524376" at="139,49,140,18" />
+      <scope id="4079842169098524376" at="60,0,62,0" />
+      <scope id="4079842169098524414" at="76,64,78,57" />
+      <scope id="4079842169098524428" at="82,61,84,54" />
+      <scope id="4079842169098524380" at="97,20,99,61" />
+      <scope id="4079842169098524376" at="142,61,144,15">
+        <var name="t" id="4079842169098524376" />
+      </scope>
+      <scope id="4079842169098524373" at="148,0,150,0" />
+      <scope id="4079842169098524373" at="150,0,152,0">
+        <var name="properties" id="4079842169098524373" />
+        <var name="store" id="4079842169098524373" />
+      </scope>
+      <scope id="4079842169098524373" at="37,0,40,0" />
+      <scope id="4079842169098524373" at="40,0,43,0" />
+      <scope id="4079842169098524373" at="43,0,46,0" />
+      <scope id="4079842169098524373" at="46,0,49,0" />
+      <scope id="4079842169098524373" at="49,0,52,0" />
+      <scope id="4079842169098524373" at="52,0,55,0" />
+      <scope id="4079842169098524373" at="55,0,58,0" />
+      <scope id="4079842169098524376" at="104,0,107,0" />
+      <scope id="4079842169098524376" at="107,0,110,0" />
+      <scope id="4079842169098524376" at="110,0,113,0" />
+      <scope id="4079842169098524376" at="113,0,116,0" />
+      <scope id="4079842169098524376" at="116,0,119,0" />
+      <scope id="4079842169098524376" at="119,0,122,0" />
+      <scope id="4079842169098524376" at="122,0,125,0" />
+      <scope id="4079842169098524376" at="125,0,128,0" />
+      <scope id="4079842169098524376" at="128,0,131,0" />
+      <scope id="4079842169098524376" at="131,65,134,16">
+        <var name="rv" id="4079842169098524376" />
+      </scope>
+      <scope id="4079842169098524376" at="136,0,139,0" />
+      <scope id="4079842169098524376" at="139,0,142,0">
+        <var name="cls" id="4079842169098524376" />
+      </scope>
+      <scope id="4079842169098524373" at="152,83,155,7" />
+      <scope id="4079842169098524376" at="142,0,146,0">
+        <var name="cls" id="4079842169098524376" />
+        <var name="copyFrom" id="4079842169098524376" />
+      </scope>
+      <scope id="4079842169098524409" at="75,0,80,0">
+        <var name="file" id="4079842169098524412" />
+      </scope>
+      <scope id="4079842169098524423" at="81,0,86,0">
+        <var name="file" id="4079842169098524424" />
+      </scope>
+      <scope id="4079842169098524441" at="86,60,91,0">
+        <var name="name" id="4079842169098683237" />
+      </scope>
+      <scope id="4079842169098524376" at="131,0,136,0" />
+      <scope id="4079842169098524373" at="152,0,157,0">
+        <var name="properties" id="4079842169098524373" />
+        <var name="store" id="4079842169098524373" />
+      </scope>
+      <scope id="4079842169098524436" at="86,0,93,0">
+        <var name="file" id="4079842169098524439" />
+      </scope>
+      <scope id="4079842169098524396" at="73,37,93,23" />
+      <scope id="4079842169098524395" at="73,0,95,0" />
+      <scope id="4079842169098524383" at="70,48,95,19">
+        <var name="tres" id="4079842169098524385" />
+      </scope>
+      <scope id="4079842169098524380" at="69,19,96,15" />
+      <scope id="4079842169098524382" at="69,19,96,15">
+        <var name="resource" id="4079842169098524468" />
+      </scope>
+      <scope id="4079842169098524380" at="65,173,100,11">
+        <var name="_output_kkxwxv_a0a" id="4079842169098524380" />
+        <var name="input" id="4079842169098524380" />
+      </scope>
+      <scope id="4079842169098524380" at="64,0,102,0">
+        <var name="monitor" id="4079842169098524380" />
+        <var name="pa" id="4079842169098524380" />
+        <var name="progressMonitor" id="4079842169098524380" />
+        <var name="rawInput" id="4079842169098524380" />
+      </scope>
+      <scope id="4079842169098524376" at="62,29,102,8" />
+      <scope id="4079842169098524376" at="62,0,104,0" />
+      <unit id="4079842169098524373" at="147,0,158,0" name="TipsAndTricks.plugin.XCreateJar_Facet$TargetProperties" />
+      <unit id="4079842169098524407" at="74,67,93,21" name="TipsAndTricks.plugin.XCreateJar_Facet$Target_doJar$1$1$1" />
+      <unit id="4079842169098524395" at="72,65,95,17" name="TipsAndTricks.plugin.XCreateJar_Facet$Target_doJar$1$1" />
+      <unit id="4079842169098524380" at="63,17,102,7" name="TipsAndTricks.plugin.XCreateJar_Facet$Target_doJar$1" />
+      <unit id="4079842169098524376" at="58,0,147,0" name="TipsAndTricks.plugin.XCreateJar_Facet$Target_doJar" />
+      <unit id="4079842169098524373" at="33,0,159,0" name="TipsAndTricks.plugin.XCreateJar_Facet" />
     </file>
   </root>
   <root nodeRef="r:00362b16-9c73-44b4-a481-2cb27df76221(TipsAndTricks.plugin)/4121025734888304966">
