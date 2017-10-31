@@ -10,7 +10,6 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.generator.template.IfMacroContext;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodesContext;
-import jetbrains.mps.generator.template.MappingScriptContext;
 
 @Generated
 public class QueriesGenerated {
@@ -48,15 +47,6 @@ public class QueriesGenerated {
   }
   public static Iterable<SNode> sourceNodesQuery_3327388102638056916(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.getChildren(_context.getNode(), MetaAdapterFactory.getContainmentLink(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f60L, 0x21ef157f5ac36ff6L, "tips"));
-  }
-  public static void mappingScript_CodeBlock_4079842169097177913(final MappingScriptContext _context) {
-
-    // todo 
-    // remove 
-
-
-
-
   }
   private static boolean isNotEmptyString(String str) {
     return str != null && str.length() > 0;

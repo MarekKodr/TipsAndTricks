@@ -80,12 +80,18 @@ public class CreateJarResources_en_Facet extends IFacet.Stub {
                       }
 
 
+                      private void renameFiles(final IFile file) {
+                        String name = file.getName();
+                        if (name.endsWith(".html.xml")) {
+                          file.rename(name.substring(0, name.length() - 4));
+                        }
+                      }
 
                       /**
                        * run creation of Jar file
                        */
                       private void doJar(final IFile file) {
-
+                        renameFiles(file);
 
                       }
                     });

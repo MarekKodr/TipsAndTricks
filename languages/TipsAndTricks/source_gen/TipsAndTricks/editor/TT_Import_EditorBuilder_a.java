@@ -55,7 +55,7 @@ import javax.swing.JComponent;
     return editorCell;
   }
   private EditorCell createConstant_v4z5r8_a0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "File: ");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Folder: ");
     editorCell.setCellId("Constant_v4z5r8_a0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.EDITABLE, false);
@@ -78,7 +78,7 @@ import javax.swing.JComponent;
     return isEmptyString(SPropertyOperations.getString(myNode, MetaAdapterFactory.getProperty(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0xf5a66eb99311abcL, 0xf5a66eb99311abdL, "file")));
   }
   private EditorCell createConstant_v4z5r8_a1a() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "<no file>");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "<folder/tips/>");
     editorCell.setCellId("Constant_v4z5r8_a1a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.TEXT_COLOR, StyleRegistry.getInstance().getSimpleColor(MPSColors.lightGray));

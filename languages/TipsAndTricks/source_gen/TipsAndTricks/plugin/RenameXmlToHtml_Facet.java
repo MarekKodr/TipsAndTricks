@@ -79,10 +79,6 @@ public class RenameXmlToHtml_Facet extends IFacet.Stub {
                         return super.acceptKept(file);
                       }
                       private void doRename(final IFile file) {
-                        String name = file.getName();
-                        if (name.endsWith(".html.xml")) {
-                          file.rename(name.substring(0, name.length() - 4));
-                        }
 
                       }
                     });

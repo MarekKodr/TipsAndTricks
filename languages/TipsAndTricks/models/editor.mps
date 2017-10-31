@@ -456,7 +456,7 @@
     <ref role="1XX52x" to="zg9c:XqpIIpchEW" resolve="TT_Import" />
     <node concept="3EZMnI" id="Ib_Fk7zNfr" role="2wV5jI">
       <node concept="3F0ifn" id="XqpIIpd4EN" role="3EZMnx">
-        <property role="3F0ifm" value="File: " />
+        <property role="3F0ifm" value="Folder: " />
         <node concept="VPxyj" id="XqpIIpfofS" role="3F10Kt">
           <property role="VOm3f" value="false" />
         </node>
@@ -479,7 +479,7 @@
           </node>
         </node>
         <node concept="3F0ifn" id="Ib_Fk7zNf_" role="1QoS34">
-          <property role="3F0ifm" value="&lt;no file&gt;" />
+          <property role="3F0ifm" value="&lt;folder/tips/&gt;" />
           <node concept="VechU" id="Ib_Fk7zNfA" role="3F10Kt">
             <property role="Vb096" value="lightGray" />
           </node>
