@@ -16,6 +16,9 @@
       </concept>
     </language>
     <language id="ff3ef785-6efd-437a-b0d5-407497433041" name="TipsAndTricks">
+      <concept id="1106309820546357948" name="TipsAndTricks.structure.TT_Import" flags="ng" index="2mqRLn">
+        <property id="1106309820546357949" name="file" index="2mqRLm" />
+      </concept>
       <concept id="3619016675360647254" name="TipsAndTricks.structure.TT_Text" flags="ng" index="3pbRKF">
         <property id="3619016675360647255" name="value" index="3pbRKE" />
       </concept>
@@ -29,6 +32,7 @@
         <child id="2445196759413256199" name="text" index="1Vb6lS" />
       </concept>
       <concept id="2445196759413256032" name="TipsAndTricks.structure.TT_Base" flags="ng" index="1Vb7Cv">
+        <child id="1106309820546357962" name="file" index="2mqRKx" />
         <child id="2445196759413256182" name="tips" index="1Vb7E9" />
       </concept>
     </language>
@@ -39,6 +43,9 @@
     </language>
   </registry>
   <node concept="1Vb7Cv" id="27J5nXqKRK0">
+    <node concept="2mqRLn" id="XqpIIpfv8L" role="2mqRKx">
+      <property role="2mqRLm" value="/Users/marek/Downloads" />
+    </node>
     <node concept="1Vb7Cu" id="6IXSjmE7aJc" role="1Vb7E9">
       <property role="TrG5h" value="Tips" />
       <node concept="3pbRKF" id="6IXSjmE7aJd" role="1Vb6lS">

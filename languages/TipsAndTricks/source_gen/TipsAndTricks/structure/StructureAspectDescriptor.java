@@ -14,6 +14,7 @@ import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptTT_Base = createDescriptorForTT_Base();
   /*package*/ final ConceptDescriptor myConceptTT_Img = createDescriptorForTT_Img();
+  /*package*/ final ConceptDescriptor myConceptTT_Import = createDescriptorForTT_Import();
   /*package*/ final ConceptDescriptor myConceptTT_Text = createDescriptorForTT_Text();
   /*package*/ final ConceptDescriptor myConceptTT_Tip = createDescriptorForTT_Tip();
   private final LanguageConceptSwitch myConceptIndex;
@@ -24,7 +25,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptTT_Base, myConceptTT_Img, myConceptTT_Text, myConceptTT_Tip);
+    return Arrays.asList(myConceptTT_Base, myConceptTT_Img, myConceptTT_Import, myConceptTT_Text, myConceptTT_Tip);
   }
 
   @Override
@@ -35,6 +36,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptTT_Base;
       case LanguageConceptSwitch.TT_Img:
         return myConceptTT_Img;
+      case LanguageConceptSwitch.TT_Import:
+        return myConceptTT_Import;
       case LanguageConceptSwitch.TT_Text:
         return myConceptTT_Text;
       case LanguageConceptSwitch.TT_Tip:
@@ -52,6 +55,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TipsAndTricks", "TT_Base", 0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f60L);
     b.class_(false, false, true);
     b.origin("r:e66c9c8c-6c32-4f44-bd9d-c18e84df8e56(TipsAndTricks.structure)/2445196759413256032");
+    b.aggregate("file", 0xf5a66eb99311acaL).target(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0xf5a66eb99311abcL).optional(true).ordered(true).multiple(true).origin("1106309820546357962").done();
     b.aggregate("tips", 0x21ef157f5ac36ff6L).target(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L).optional(true).ordered(true).multiple(true).origin("2445196759413256182").done();
     b.alias("TipsAndTricks");
     return b.create();
@@ -64,6 +68,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.prop("height", 0x6bbde135aa1bfda8L, "7763608953260080552");
     b.aggregate("source", 0x2e2d41d99f910a97L).target(0x982eb8df2c964bd7L, 0x996311712ea622e5L, 0xb8b96b5078f3367L).optional(true).ordered(true).multiple(false).origin("3327388102637456023").done();
     b.alias("img");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForTT_Import() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TipsAndTricks", "TT_Import", 0xff3ef7856efd437aL, 0xb0d5407497433041L, 0xf5a66eb99311abcL);
+    b.class_(false, false, false);
+    b.origin("r:e66c9c8c-6c32-4f44-bd9d-c18e84df8e56(TipsAndTricks.structure)/1106309820546357948");
+    b.prop("file", 0xf5a66eb99311abdL, "1106309820546357949");
+    b.alias("import");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTT_Text() {

@@ -14,6 +14,7 @@
     <import index="iuxj" ref="r:64db3a92-5968-4a73-b456-34504a2d97a6(jetbrains.mps.core.xml.structure)" />
     <import index="tt0q" ref="r:ea884767-f424-4c97-a82e-eccd57dbc217(jetbrains.mps.core.xml.textGen)" />
     <import index="gzph" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.psi.xml(MPS.IDEA/)" />
+    <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -60,6 +61,13 @@
     <property role="19KtqR" value="true" />
     <property role="34LRSv" value="TipsAndTricks" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="XqpIIpchFa" role="1TKVEi">
+      <property role="IQ2ns" value="1106309820546357962" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="file" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="XqpIIpchEW" resolve="TT_Import" />
+    </node>
     <node concept="1TJgyj" id="27J5nXqKQZQ" role="1TKVEi">
       <property role="IQ2ns" value="2445196759413256182" />
       <property role="20lmBu" value="aggregation" />
@@ -124,6 +132,17 @@
     <node concept="1TJgyi" id="38Tl7RF5yxn" role="1TKVEl">
       <property role="IQ2nx" value="3619016675360647255" />
       <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="XqpIIpchEW">
+    <property role="EcuMT" value="1106309820546357948" />
+    <property role="TrG5h" value="TT_Import" />
+    <property role="34LRSv" value="import" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="XqpIIpchEX" role="1TKVEl">
+      <property role="IQ2nx" value="1106309820546357949" />
+      <property role="TrG5h" value="file" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
