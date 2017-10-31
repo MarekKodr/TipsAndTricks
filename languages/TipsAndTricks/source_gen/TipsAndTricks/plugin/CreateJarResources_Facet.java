@@ -25,11 +25,10 @@ import jetbrains.mps.internal.make.runtime.util.DeltaReconciler;
 import jetbrains.mps.internal.make.runtime.util.FilesDelta;
 import jetbrains.mps.vfs.IFile;
 import java.io.File;
-import com.intellij.xml.actions.xmlbeans.FileUtils;
 import java.util.jar.JarOutputStream;
 import java.io.IOException;
-import java.io.BufferedInputStream;
 import java.util.jar.JarEntry;
+import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.util.jar.Manifest;
 import java.util.jar.Attributes;
@@ -101,79 +100,26 @@ public class CreateJarResources_Facet extends IFacet.Stub {
                         return path.substring(0, path.lastIndexOf("/"));
                       }
 
-
-                      /**
-                       * Create folders if does not exists
-                       */
-                      private void createFolder(File folder) {
-                        if (!(folder.exists())) {
-                          try {
-                            folder.mkdir();
-                          } catch (SecurityException s) {
-                            s.printStackTrace();
-                          }
-                        }
-                      }
-
-                      /**
-                       * Prepare structure for jarfile
-                       */
-                      private void createStructure(String path) {
-
-                        File newRootFolder = new File((path + "/META-INF"));
-
-                        createFolder(newRootFolder);
-
-                        File source = new File(path + "/IdeTipsAndTricks.xml");
-                        File dest = new File(path + "/META-INF/IdeTipsAndTricks.xml");
-                        FileUtils.copyFile(source, dest);
-
-                      }
-
                       /**
                        * Add file to jar
                        */
-                      private void add(File source, JarOutputStream target) throws IOException {
-                        BufferedInputStream in = null;
+                      private void addTipsAndTricks(File source, JarOutputStream target) throws IOException {
 
-                        try {
-                          if (source.isDirectory()) {
-                            String name = source.getPath().replace("\\", "/");
-                            if (!(name.isEmpty())) {
-                              if (!(name.endsWith("/"))) {
-                                name += "/";
-                              }
-                              JarEntry entry = new JarEntry(name);
-                              entry.setTime(source.lastModified());
-                              target.putNextEntry(entry);
-                              target.closeEntry();
-                            }
-                            for (File nestedFile : source.listFiles()) {
-                              add(nestedFile, target);
-                            }
-                            return;
+                        JarEntry entry = new JarEntry("/META-INF/IdeTipsAndTricks.xml");
+                        entry.setTime(source.lastModified());
+                        target.putNextEntry(entry);
+
+                        BufferedInputStream in = new BufferedInputStream(new FileInputStream(source));
+
+                        byte[] buffer = new byte[1024];
+                        while (true) {
+                          int count = in.read(buffer);
+                          if (count == -1) {
+                            break;
                           }
-
-                          JarEntry entry = new JarEntry("/META-INF/IdeTipsAndTricks.xml");
-                          entry.setTime(source.lastModified());
-                          target.putNextEntry(entry);
-                          in = new BufferedInputStream(new FileInputStream(source));
-
-                          byte[] buffer = new byte[1024];
-                          while (true) {
-                            int count = in.read(buffer);
-                            if (count == -1) {
-                              break;
-                            }
-                            target.write(buffer, 0, count);
-                          }
-                          target.closeEntry();
-
-                        } finally {
-                          if (in != null) {
-                            in.close();
-                          }
+                          target.write(buffer, 0, count);
                         }
+                        target.closeEntry();
                       }
 
                       /**
@@ -185,8 +131,8 @@ public class CreateJarResources_Facet extends IFacet.Stub {
                         JarOutputStream target = new JarOutputStream(new FileOutputStream(path + "/ide_resources.jar"), manifest);
 
 
-                        File file = new File(path + "/IdeTipsAndTricks.xml");
-                        add(file, target);
+                        addTipsAndTricks(new File(path + "/IdeTipsAndTricks.xml"), target);
+                        addTipsAndTricks(new File(path + "idea"), target);
 
                         target.close();
                       }
