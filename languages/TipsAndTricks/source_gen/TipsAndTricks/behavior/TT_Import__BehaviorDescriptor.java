@@ -17,10 +17,10 @@ import org.jetbrains.mps.openapi.model.SNode;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
+import java.io.File;
 import java.util.List;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
-import java.io.File;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.project.AbstractModule;
 import jetbrains.mps.util.MacrosFactory;
@@ -36,6 +36,9 @@ import jetbrains.mps.vfs.IFile;
 import jetbrains.mps.vfs.FileSystems;
 import org.jetbrains.mps.openapi.module.ModelAccess;
 import java.awt.Dimension;
+import java.util.ArrayList;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -48,8 +51,10 @@ public final class TT_Import__BehaviorDescriptor extends BaseBHDescriptor {
   public static final SMethod<Boolean> isValid_idIb_Fk7zRKP = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("isValid").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("Ib_Fk7zRKP").registry(REGISTRY).build();
   public static final SMethod<JComponent> createSelectFileButton_id4FdBKZ_bOwU = new SMethodBuilder<JComponent>(new SJavaCompoundTypeImpl(JComponent.class)).name("createSelectFileButton").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4FdBKZ_bOwU").registry(REGISTRY).build(SMethodBuilder.createJavaParameter(SNode.class, ""), SMethodBuilder.createJavaParameter(SProperty.class, ""), SMethodBuilder.createJavaParameter(EditorContext.class, ""), SMethodBuilder.createJavaParameter(Boolean.TYPE, ""));
   public static final SMethod<JComponent> createSelectButton_idXqpIIpf2sK = new SMethodBuilder<JComponent>(new SJavaCompoundTypeImpl(JComponent.class)).name("createSelectButton").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("XqpIIpf2sK").registry(REGISTRY).build(SMethodBuilder.createJavaParameter(SNode.class, ""), SMethodBuilder.createJavaParameter(SProperty.class, ""), SMethodBuilder.createJavaParameter(EditorContext.class, ""), SMethodBuilder.createJavaParameter(Boolean.TYPE, ""), SMethodBuilder.createJavaParameter((Class<_FunctionTypes._return_P1_E0<? extends String, ? super String>>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<_FunctionTypes._return_P1_E0<? extends String, ? super String>>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter(Boolean.TYPE, ""));
+  public static final SMethod<String> trimmPath_id6WbmAFfcW3z = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("trimmPath").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("6WbmAFfcW3z").registry(REGISTRY).build(SMethodBuilder.createJavaParameter(File.class, ""));
+  public static final SMethod<List<SNode>> getTips_id4FdBKZ_knM0 = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("getTips").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4FdBKZ_knM0").registry(REGISTRY).build(SMethodBuilder.createJavaParameter(File.class, ""));
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(isValid_idIb_Fk7zRKP, createSelectFileButton_id4FdBKZ_bOwU, createSelectButton_idXqpIIpf2sK);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(isValid_idIb_Fk7zRKP, createSelectFileButton_id4FdBKZ_bOwU, createSelectButton_idXqpIIpf2sK, trimmPath_id6WbmAFfcW3z, getTips_id4FdBKZ_knM0);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -57,6 +62,7 @@ public final class TT_Import__BehaviorDescriptor extends BaseBHDescriptor {
   /*package*/ static boolean isValid_idIb_Fk7zRKP(@NotNull SNode __thisNode__) {
 
     return new File(SPropertyOperations.getString(__thisNode__, MetaAdapterFactory.getProperty(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0xf5a66eb99311abcL, 0xf5a66eb99311abdL, "file"))).isDirectory();
+
   }
   /*package*/ static JComponent createSelectFileButton_id4FdBKZ_bOwU(@NotNull SNode __thisNode__, final SNode sourceNode, final SProperty property, final EditorContext context, boolean copy) {
     final AbstractModule module = (AbstractModule) sourceNode.getModel().getModule();
@@ -108,6 +114,30 @@ public final class TT_Import__BehaviorDescriptor extends BaseBHDescriptor {
     button.setPreferredSize(new Dimension(20, 20));
     return button;
   }
+  /*package*/ static String trimmPath_id6WbmAFfcW3z(@NotNull SNode __thisNode__, File file) {
+    if (file.toString().contains("/")) {
+      return file.toString().substring(file.toString().lastIndexOf("/") + 1);
+    }
+    return file.toString();
+  }
+  /*package*/ static List<SNode> getTips_id4FdBKZ_knM0(@NotNull SNode __thisNode__, File folder) {
+
+    List<SNode> mlist = new ArrayList<SNode>();
+
+    File[] fList = folder.listFiles();
+    if (fList != null) {
+      for (File file : fList) {
+        if (file.isFile() && file.toString().endsWith(".html")) {
+
+          SNode tmpNode = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L, "TipsAndTricks.structure.TT_Tip"));
+          SPropertyOperations.set(tmpNode, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), TT_Import__BehaviorDescriptor.trimmPath_id6WbmAFfcW3z.invoke(__thisNode__, file));
+          ListSequence.fromList(mlist).addElement(tmpNode);
+        }
+      }
+    }
+    return mlist;
+
+  }
 
   /*package*/ TT_Import__BehaviorDescriptor() {
     super(REGISTRY);
@@ -131,6 +161,10 @@ public final class TT_Import__BehaviorDescriptor extends BaseBHDescriptor {
         return (T) ((JComponent) createSelectFileButton_id4FdBKZ_bOwU(node, (SNode) parameters[0], (SProperty) parameters[1], (EditorContext) parameters[2], ((boolean) (Boolean) parameters[3])));
       case 2:
         return (T) ((JComponent) createSelectButton_idXqpIIpf2sK(node, (SNode) parameters[0], (SProperty) parameters[1], (EditorContext) parameters[2], ((boolean) (Boolean) parameters[3]), (_FunctionTypes._return_P1_E0<? extends String, ? super String>) parameters[4], (_FunctionTypes._return_P1_E0<? extends String, ? super String>) parameters[5], ((boolean) (Boolean) parameters[6])));
+      case 3:
+        return (T) ((String) trimmPath_id6WbmAFfcW3z(node, (File) parameters[0]));
+      case 4:
+        return (T) ((List<SNode>) getTips_id4FdBKZ_knM0(node, (File) parameters[0]));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

@@ -43,9 +43,6 @@
     </language>
   </registry>
   <node concept="1Vb7Cv" id="27J5nXqKRK0">
-    <node concept="2mqRLn" id="XqpIIpfv8L" role="2mqRKx">
-      <property role="2mqRLm" value="/Users/marek/Downloads" />
-    </node>
     <node concept="1Vb7Cu" id="6IXSjmE7aJc" role="1Vb7E9">
       <property role="TrG5h" value="Tips" />
       <node concept="3pbRKF" id="6IXSjmE7aJd" role="1Vb6lS">
@@ -82,6 +79,9 @@
           <property role="c1ake" value="/Users/marek/MPSProjects/TipsAndTricks/languages/TipsAndTricks/src/donkey.png" />
         </node>
       </node>
+    </node>
+    <node concept="2mqRLn" id="4FdBKZ_fjxQ" role="2mqRKx">
+      <property role="2mqRLm" value="/Users/marek/Desktop/MPS_resource/mps-resources_en/tips" />
     </node>
   </node>
 </model>

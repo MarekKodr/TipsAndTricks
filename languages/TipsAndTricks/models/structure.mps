@@ -65,7 +65,7 @@
       <property role="IQ2ns" value="1106309820546357962" />
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="file" />
-      <property role="20lbJX" value="0..n" />
+      <property role="20lbJX" value="0..1" />
       <ref role="20lvS9" node="XqpIIpchEW" resolve="TT_Import" />
     </node>
     <node concept="1TJgyj" id="27J5nXqKQZQ" role="1TKVEi">

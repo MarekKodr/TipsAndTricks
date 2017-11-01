@@ -55,7 +55,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("TipsAndTricks", "TT_Base", 0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f60L);
     b.class_(false, false, true);
     b.origin("r:e66c9c8c-6c32-4f44-bd9d-c18e84df8e56(TipsAndTricks.structure)/2445196759413256032");
-    b.aggregate("file", 0xf5a66eb99311acaL).target(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0xf5a66eb99311abcL).optional(true).ordered(true).multiple(true).origin("1106309820546357962").done();
+    b.aggregate("file", 0xf5a66eb99311acaL).target(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0xf5a66eb99311abcL).optional(true).ordered(true).multiple(false).origin("1106309820546357962").done();
     b.aggregate("tips", 0x21ef157f5ac36ff6L).target(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L).optional(true).ordered(true).multiple(true).origin("2445196759413256182").done();
     b.alias("TipsAndTricks");
     return b.create();

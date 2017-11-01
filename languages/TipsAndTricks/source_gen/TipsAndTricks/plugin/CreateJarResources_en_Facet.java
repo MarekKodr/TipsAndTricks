@@ -39,7 +39,7 @@ public class CreateJarResources_en_Facet extends IFacet.Stub {
     return null;
   }
   public Iterable<IFacet.Name> required() {
-    return Sequence.fromArray(new IFacet.Name[]{new IFacet.Name("jetbrains.mps.lang.core.TextGen"), new IFacet.Name("jetbrains.mps.lang.core.Generate"), new IFacet.Name("TipsAndTricks.RenameXmlToHtml")});
+    return Sequence.fromArray(new IFacet.Name[]{new IFacet.Name("jetbrains.mps.lang.core.TextGen"), new IFacet.Name("jetbrains.mps.lang.core.Generate")});
   }
   public Iterable<IFacet.Name> extended() {
     return null;
@@ -80,6 +80,9 @@ public class CreateJarResources_en_Facet extends IFacet.Stub {
                       }
 
 
+                      /**
+                       * change listed files from .xml to .html
+                       */
                       private void renameFiles(final IFile file) {
                         String name = file.getName();
                         if (name.endsWith(".html.xml")) {

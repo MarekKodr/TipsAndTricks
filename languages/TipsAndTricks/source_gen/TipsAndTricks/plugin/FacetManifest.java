@@ -14,7 +14,6 @@ public class FacetManifest implements IFacetManifest {
   public FacetManifest() {
     ListSequence.fromList(facets).addElement(new CreateJarResources_Facet());
     ListSequence.fromList(facets).addElement(new CreateJarResources_en_Facet());
-    ListSequence.fromList(facets).addElement(new RenameXmlToHtml_Facet());
   }
   public Iterable<IFacet> facets() {
     return facets;

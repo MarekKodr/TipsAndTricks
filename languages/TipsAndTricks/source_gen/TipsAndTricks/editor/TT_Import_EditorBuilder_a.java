@@ -59,6 +59,7 @@ import javax.swing.JComponent;
     editorCell.setCellId("Constant_v4z5r8_a0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.EDITABLE, false);
+    style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
