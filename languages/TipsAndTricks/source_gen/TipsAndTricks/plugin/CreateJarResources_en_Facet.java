@@ -18,10 +18,20 @@ import jetbrains.mps.make.resources.IPropertiesAccessor;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.mps.openapi.util.ProgressMonitor;
 import jetbrains.mps.smodel.resources.TResource;
+import java.util.jar.Manifest;
+import java.util.jar.Attributes;
+import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
+import java.util.jar.JarOutputStream;
 import jetbrains.mps.vfs.FileSystem;
 import jetbrains.mps.internal.make.runtime.util.DeltaReconciler;
 import jetbrains.mps.internal.make.runtime.util.FilesDelta;
 import jetbrains.mps.vfs.IFile;
+import java.io.File;
+import java.io.IOException;
+import java.util.jar.JarEntry;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import jetbrains.mps.make.script.IConfig;
 import java.util.Map;
 import jetbrains.mps.make.script.IPropertiesPool;
@@ -62,6 +72,14 @@ public class CreateJarResources_en_Facet extends IFacet.Stub {
           final Iterable<TResource> input = (Iterable<TResource>) (Iterable) rawInput;
           switch (0) {
             case 0:
+              // ................. 
+
+              final Manifest manifest = new Manifest();
+              manifest.getMainAttributes().put(Attributes.Name.MANIFEST_VERSION, "1.0");
+              final Wrappers._T<JarOutputStream> target = new Wrappers._T<JarOutputStream>(null);
+              final Wrappers._T<Boolean> isFirstIteration = new Wrappers._T<Boolean>(true);
+
+              // ................. 
               for (IResource resource : input) {
                 final TResource tres = ((TResource) resource);
                 FileSystem.getInstance().runWriteTransaction(new Runnable() {
@@ -79,6 +97,19 @@ public class CreateJarResources_en_Facet extends IFacet.Stub {
                         return super.acceptKept(file);
                       }
 
+                      /**
+                       * Trimm path to upper folder
+                       */
+                      private String trimmEndOfPath(String path) {
+                        return path.substring(0, path.lastIndexOf("/"));
+                      }
+
+                      /**
+                       * trimm path to target file
+                       */
+                      public String trimmPath(String file) {
+                        return file.substring(file.lastIndexOf("/"));
+                      }
 
                       /**
                        * change listed files from .xml to .html
@@ -89,17 +120,75 @@ public class CreateJarResources_en_Facet extends IFacet.Stub {
                           file.rename(name.substring(0, name.length() - 4));
                         }
                       }
+                      /**
+                       * Add TipsAndTricks to file to jar
+                       */
+                      private void addTipsAndTricks(File source, JarOutputStream target, String file) throws IOException {
 
+                        JarEntry entry = new JarEntry("/tips" + file);
+                        entry.setTime(source.lastModified());
+                        target.putNextEntry(entry);
+
+                        BufferedInputStream in = new BufferedInputStream(new FileInputStream(source));
+
+                        byte[] buffer = new byte[1024];
+                        while (true) {
+                          int count = in.read(buffer);
+                          if (count == -1) {
+                            break;
+                          }
+                          target.write(buffer, 0, count);
+                        }
+                        target.closeEntry();
+                      }
+
+                      /**
+                       * Add Manifest and specify which file to add to jar
+                       */
+                      private void addFiles(String path, String file) throws IOException {
+
+                        if (isFirstIteration.value) {
+                          target.value = new JarOutputStream(new FileOutputStream(path + "/ide-resources_en.jar"), manifest);
+                          isFirstIteration.value = false;
+                        }
+
+                        addTipsAndTricks(new File(path + file), target.value, file);
+                      }
+
+                      /**
+                       * add HTML files into sources
+                       */
+                      private void addHtml(IFile inputFile) {
+
+                        String name = inputFile.getName();
+
+                        if (name.endsWith(".html")) {
+                          String path = trimmEndOfPath(inputFile.getPath());
+                          String file = trimmPath(inputFile.getPath());
+
+                          try {
+                            addFiles(path, file);
+                          } catch (IOException e) {
+                            e.printStackTrace();
+                          }
+                        }
+                      }
                       /**
                        * run creation of Jar file
                        */
-                      private void doJar(final IFile file) {
-                        renameFiles(file);
-
+                      private void doJar(final IFile inputfile) {
+                        renameFiles(inputfile);
+                        addHtml(inputfile);
                       }
                     });
                   }
                 });
+              }
+              try {
+                target.value.close();
+
+              } catch (IOException e) {
+                e.printStackTrace();
               }
             default:
               progressMonitor.done();

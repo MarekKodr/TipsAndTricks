@@ -48,6 +48,9 @@ public class QueriesGenerated {
   public static boolean ifMacro_Condition_7763608953260354737(final IfMacroContext _context) {
     return isNotEmptyString(SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), MetaAdapterFactory.getContainmentLink(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L, 0x21ef157f5ac3700aL, "img")), MetaAdapterFactory.getProperty(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac37010L, 0x6bbde135aa1bfda8L, "height")));
   }
+  public static boolean ifMacro_Condition_8001588577744475424(final IfMacroContext _context) {
+    return isNotEmptyString(SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), MetaAdapterFactory.getContainmentLink(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L, 0x21ef157f5ac3700aL, "img")), MetaAdapterFactory.getContainmentLink(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac37010L, 0x2e2d41d99f910a97L, "source")), MetaAdapterFactory.getProperty(0x982eb8df2c964bd7L, 0x996311712ea622e5L, 0xb8b96b5078f3367L, 0xb8b96b5078f33bbL, "file")));
+  }
   public static Iterable<SNode> sourceNodesQuery_3619016675360923884(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.getChildren(_context.getNode(), MetaAdapterFactory.getContainmentLink(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L, 0x21ef157f5ac37007L, "text"));
   }

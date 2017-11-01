@@ -41,6 +41,12 @@
     <classNode extendsClassName="jetbrains.mps.make.facet.IFacet" />
   </dependency>
   <dependency className="TipsAndTricks.plugin.CreateJarResources_en_Facet" file="CreateJarResources_en_Facet.java">
+    <classNode dependClassName="java.io.BufferedInputStream" />
+    <classNode dependClassName="java.io.File" />
+    <classNode dependClassName="java.io.FileInputStream" />
+    <classNode dependClassName="java.io.FileOutputStream" />
+    <classNode dependClassName="java.io.IOException" />
+    <classNode dependClassName="java.lang.Boolean" />
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Override" />
@@ -50,6 +56,11 @@
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.jar.Attributes" />
+    <classNode dependClassName="java.util.jar.JarEntry" />
+    <classNode dependClassName="java.util.jar.JarOutputStream" />
+    <classNode dependClassName="java.util.jar.Manifest" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.Wrappers" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
     <classNode dependClassName="jetbrains.mps.internal.make.runtime.util.DeltaReconciler" />

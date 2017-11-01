@@ -91,7 +91,7 @@ public class CreateJarResources_Facet extends IFacet.Stub {
                       /**
                        * Trimm path to upper folder
                        */
-                      private String trimmPath(String path) {
+                      private String trimmEndOfPath(String path) {
                         return path.substring(0, path.lastIndexOf("/"));
                       }
 
@@ -123,7 +123,7 @@ public class CreateJarResources_Facet extends IFacet.Stub {
                       private void addFiles(String path) throws IOException {
                         Manifest manifest = new Manifest();
                         manifest.getMainAttributes().put(Attributes.Name.MANIFEST_VERSION, "1.0");
-                        JarOutputStream target = new JarOutputStream(new FileOutputStream(path + "/ide_resources.jar"), manifest);
+                        JarOutputStream target = new JarOutputStream(new FileOutputStream(path + "/ide-resources.jar"), manifest);
 
 
                         addTipsAndTricks(new File(path + "/IdeTipsAndTricks.xml"), target);
@@ -138,7 +138,7 @@ public class CreateJarResources_Facet extends IFacet.Stub {
                       private void doJar(final IFile file) {
                         String name = file.getName();
                         if (name.endsWith("IdeTipsAndTricks.xml")) {
-                          String path = trimmPath(file.getPath());
+                          String path = trimmEndOfPath(file.getPath());
 
                           try {
                             addFiles(path);
