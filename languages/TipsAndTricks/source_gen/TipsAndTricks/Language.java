@@ -13,8 +13,6 @@ import jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor;
 import jetbrains.mps.smodel.runtime.ConstraintsAspectDescriptor;
 import jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor;
 import TipsAndTricks.editor.EditorAspectDescriptorImpl;
-import jetbrains.mps.smodel.runtime.MakeAspectDescriptor;
-import TipsAndTricks.plugin.FacetAspectDescriptor;
 import jetbrains.mps.smodel.runtime.StructureAspectDescriptor;
 import jetbrains.mps.smodel.runtime.ConceptPresentationAspect;
 import TipsAndTricks.structure.ConceptPresentationAspectImpl;
@@ -60,9 +58,6 @@ public class Language extends LanguageRuntime {
     }
     if (aspectClass == EditorAspectDescriptor.class) {
       return aspectClass.cast(new EditorAspectDescriptorImpl());
-    }
-    if (aspectClass == MakeAspectDescriptor.class) {
-      return aspectClass.cast(new FacetAspectDescriptor());
     }
     if (aspectClass == StructureAspectDescriptor.class) {
       return aspectClass.cast(new TipsAndTricks.structure.StructureAspectDescriptor());

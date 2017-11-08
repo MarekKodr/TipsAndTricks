@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debug-info version="2">
   <root nodeRef="r:2d11a2c3-0cbf-4389-ade0-df943ae20d45(TipsAndTricks.sandbox)/2445196759413259264">
-    <file name="AXXXX.html.xml">
-      <unit id="8001588577744424016" at="1,0,12,7" name="TipsAndTricks.sandbox.AXXXX$html" />
-    </file>
     <file name="IdeTipsAndTricks.xml">
-      <unit id="2445196759413259264" at="1,0,73,14" name="TipsAndTricks.sandbox.IdeTipsAndTricks" />
+      <unit id="2445196759413259264" at="1,0,72,14" name="TipsAndTricks.sandbox.IdeTipsAndTricks" />
     </file>
     <file name="Tips.html.xml">
       <unit id="7763608953260125132" at="1,0,19,7" name="TipsAndTricks.sandbox.Tips$html" />
