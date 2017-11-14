@@ -68,6 +68,11 @@
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="27J5nXqKQXx" resolve="TT_Tip" />
     </node>
+    <node concept="1TJgyi" id="3F2vwVr6YfG" role="1TKVEl">
+      <property role="IQ2nx" value="4234085201952367596" />
+      <property role="TrG5h" value="path" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
   </node>
   <node concept="1TIwiD" id="27J5nXqKQXx">
     <property role="EcuMT" value="2445196759413256033" />
