@@ -10,10 +10,9 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import java.io.File;
 import jetbrains.mps.baseLanguage.logging.runtime.model.LoggingRuntime;
 import org.apache.log4j.Level;
-import jetbrains.mps.smodel.ModuleRepositoryFacade;
-import org.jetbrains.mps.openapi.persistence.PersistenceFacade;
 import jetbrains.mps.generator.template.IfMacroContext;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodesContext;
@@ -47,6 +46,9 @@ public class QueriesGenerated {
     }
     return "MISSING_INPUT_ERROR";
   }
+  public static Object propertyMacro_GetPropertyValue_2982883097094645221(final PropertyMacroContext _context) {
+    return "/Users/marek/MPSProjects/TipsAndTricks/tmp/IdeTipsAndTricks.xml";
+  }
   public static Object propertyMacro_GetPropertyValue_2982883097092738053(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x3239547deb162856L, 0x3239547deb162857L, "value"));
   }
@@ -63,9 +65,18 @@ public class QueriesGenerated {
     return "resources_" + SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")).toLowerCase();
   }
   public static Object propertyMacro_GetPropertyValue_2982883097092662943(final PropertyMacroContext _context) {
-    LoggingRuntime.logMsgView(Level.FATAL, ModuleRepositoryFacade.getInstance().getModule(PersistenceFacade.getInstance().createModuleReference("ff3ef785-6efd-437a-b0d5-407497433041(TipsAndTricks)")).getRepository().toString(), QueriesGenerated.class, null, null);
+    String path = "/Users/marek/MPSProjects/TipsAndTricks/tmp/" + "resources_" + SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")).toLowerCase();
 
-    return "/Users/marek/MPSProjects/TipsAndTricks/tmp/" + SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + ".html";
+    File tmpFile = new File(path);
+    if (!(tmpFile.isDirectory()) || !(tmpFile.exists())) {
+      tmpFile.mkdir();
+    }
+
+    LoggingRuntime.logMsgView(Level.INFO, tmpFile.toString(), QueriesGenerated.class, null, null);
+    LoggingRuntime.logMsgView(Level.FATAL, path + "/" + SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + ".html", QueriesGenerated.class, null, null);
+
+    return path + "/" + SPropertyOperations.getString(_context.getNode(), MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name")) + ".html";
+
   }
   public static boolean ifMacro_Condition_7763608953260265400(final IfMacroContext _context) {
     return isNotEmptyString(SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), MetaAdapterFactory.getContainmentLink(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L, 0x21ef157f5ac3700aL, "img")), MetaAdapterFactory.getProperty(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac37010L, 0x6bbde135aa1bfda5L, "width")));

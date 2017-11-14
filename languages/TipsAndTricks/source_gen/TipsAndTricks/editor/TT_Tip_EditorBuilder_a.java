@@ -79,6 +79,7 @@ import jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteSmart;
     editorCell.addEditorCell(createRefNodeList_k7qf7c_g0a());
     editorCell.addEditorCell(createConstant_k7qf7c_h0a());
     editorCell.addEditorCell(createRefNode_k7qf7c_i0a());
+    editorCell.addEditorCell(createConstant_k7qf7c_j0a());
     return editorCell;
   }
   private boolean nodeCondition_k7qf7c_a0a0() {
@@ -277,5 +278,15 @@ import jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteSmart;
     protected String getNoTargetText() {
       return "<no img>";
     }
+  }
+  private EditorCell createConstant_k7qf7c_j0a() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
+    editorCell.setCellId("Constant_k7qf7c_j0a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
+    style.set(StyleAttributes.EDITABLE, false);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
   }
 }
