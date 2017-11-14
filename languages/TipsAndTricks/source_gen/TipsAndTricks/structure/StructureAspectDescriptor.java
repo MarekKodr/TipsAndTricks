@@ -85,7 +85,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.origin("r:e66c9c8c-6c32-4f44-bd9d-c18e84df8e56(TipsAndTricks.structure)/3619016675360647254");
     b.prop("value", 0x3239547deb162857L, "3619016675360647255");
-    b.alias("text");
+    b.alias("line");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTT_Text() {
@@ -94,6 +94,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:e66c9c8c-6c32-4f44-bd9d-c18e84df8e56(TipsAndTricks.structure)/2982883097091637802");
     b.aggregate("line", 0x2965545f70aa022fL).target(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x3239547deb162856L).optional(true).ordered(true).multiple(true).origin("2982883097091637807").done();
+    b.alias("text");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTT_Tip() {
@@ -101,7 +102,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, true);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:e66c9c8c-6c32-4f44-bd9d-c18e84df8e56(TipsAndTricks.structure)/2445196759413256033");
-    b.aggregate("defaultText", 0x2965545f70aca858L).target(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x2965545f70aa022aL).optional(false).ordered(true).multiple(false).origin("2982883097091811416").done();
     b.aggregate("text", 0x21ef157f5ac37007L).target(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x2965545f70aa022aL).optional(true).ordered(true).multiple(true).origin("2445196759413256199").done();
     b.aggregate("img", 0x21ef157f5ac3700aL).target(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac37010L).optional(false).ordered(true).multiple(false).origin("2445196759413256202").done();
     b.alias("tip");

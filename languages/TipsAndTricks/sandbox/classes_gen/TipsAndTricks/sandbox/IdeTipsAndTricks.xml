@@ -1,5 +1,5 @@
 <idea-plugin>
   <extensions defaultExtensionNs="com.intellij">
-    <tipAndTrick name="MISSING_INPUT_ERROR"></tipAndTrick>
+    <tipAndTrick name="myTip.html"></tipAndTrick>
   </extensions>
 </idea-plugin>

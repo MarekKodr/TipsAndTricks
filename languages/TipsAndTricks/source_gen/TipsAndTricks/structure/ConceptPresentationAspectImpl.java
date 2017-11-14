@@ -46,7 +46,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_TT_Line == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("plain text");
-          cpb.rawPresentation("text");
+          cpb.rawPresentation("line");
           props_TT_Line = cpb.create();
         }
         return props_TT_Line;

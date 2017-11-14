@@ -4,8 +4,11 @@
     <file name="IdeTipsAndTricks.xml">
       <unit id="2445196759413259264" at="1,0,5,14" name="TipsAndTricks.sandbox.IdeTipsAndTricks" />
     </file>
-    <file name="null.html.xml">
-      <unit id="2982883097092065563" at="1,0,11,7" name="TipsAndTricks.sandbox.null$html" />
+    <file name="resources_cz.xml">
+      <unit id="2982883097093165098" at="1,0,16,7" name="TipsAndTricks.sandbox.resources_cz" />
+    </file>
+    <file name="resources_en.xml">
+      <unit id="2982883097092504005" at="1,0,16,7" name="TipsAndTricks.sandbox.resources_en" />
     </file>
   </root>
 </debug-info>
