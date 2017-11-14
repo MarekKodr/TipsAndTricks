@@ -4,7 +4,7 @@
     <classNode dependClassName="TipsAndTricks.behavior.TT_Base__BehaviorDescriptor" />
     <classNode dependClassName="TipsAndTricks.behavior.TT_Img__BehaviorDescriptor" />
     <classNode dependClassName="TipsAndTricks.behavior.TT_Import__BehaviorDescriptor" />
-    <classNode dependClassName="TipsAndTricks.behavior.TT_Tip__BehaviorDescriptor" />
+    <classNode dependClassName="TipsAndTricks.behavior.TT_Text__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.BHDescriptor" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.ConceptSwitchIndex" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.ConceptSwitchIndexBuilder" />
@@ -98,7 +98,7 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.module.ModelAccess" />
     <classNode extendsClassName="jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor" />
   </dependency>
-  <dependency className="TipsAndTricks.behavior.TT_Tip__BehaviorDescriptor" file="TT_Tip__BehaviorDescriptor.java">
+  <dependency className="TipsAndTricks.behavior.TT_Text__BehaviorDescriptor" file="TT_Text__BehaviorDescriptor.java">
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.Arrays" />
@@ -107,7 +107,7 @@
     <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.BehaviorRegistry" />
     <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.SConstructor" />
     <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.SMethod" />
-    <classNode dependClassName="jetbrains.mps.smodel.action.SNodeFactoryOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.smodel.language.ConceptRegistry" />
     <classNode dependClassName="org.jetbrains.annotations.NotNull" />

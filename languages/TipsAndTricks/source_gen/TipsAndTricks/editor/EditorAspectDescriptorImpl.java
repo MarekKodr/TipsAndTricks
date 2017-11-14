@@ -24,8 +24,10 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
       case 2:
         return Collections.<ConceptEditor>singletonList(new TT_Import_Editor());
       case 3:
-        return Collections.<ConceptEditor>singletonList(new TT_Text_Editor());
+        return Collections.<ConceptEditor>singletonList(new TT_Line_Editor());
       case 4:
+        return Collections.<ConceptEditor>singletonList(new TT_Text_Editor());
+      case 5:
         return Collections.<ConceptEditor>singletonList(new TT_Tip_Editor());
       default:
     }
@@ -34,5 +36,5 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
 
 
 
-  private static final ConceptSwitchIndex index_xbvbvu_a0a = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f60L), MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac37010L), MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0xf5a66eb99311abcL), MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x3239547deb162856L), MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L)).seal();
+  private static final ConceptSwitchIndex index_xbvbvu_a0a = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f60L), MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac37010L), MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0xf5a66eb99311abcL), MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x3239547deb162856L), MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x2965545f70aa022aL), MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L)).seal();
 }

@@ -14,8 +14,8 @@ import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor {
   private final BHDescriptor myTT_Import__BehaviorDescriptor = new TT_Import__BehaviorDescriptor();
   private final BHDescriptor myTT_Base__BehaviorDescriptor = new TT_Base__BehaviorDescriptor();
-  private final BHDescriptor myTT_Tip__BehaviorDescriptor = new TT_Tip__BehaviorDescriptor();
   private final BHDescriptor myTT_Img__BehaviorDescriptor = new TT_Img__BehaviorDescriptor();
+  private final BHDescriptor myTT_Text__BehaviorDescriptor = new TT_Text__BehaviorDescriptor();
 
   public BehaviorAspectDescriptor() {
   }
@@ -31,10 +31,10 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
       case 2:
         return myTT_Import__BehaviorDescriptor;
       case 3:
-        return myTT_Tip__BehaviorDescriptor;
+        return myTT_Text__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex index_846f5o_a0h = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f60L), MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac37010L), MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0xf5a66eb99311abcL), MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f61L)).seal();
+  private static final ConceptSwitchIndex index_846f5o_a0h = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac36f60L), MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x21ef157f5ac37010L), MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0xf5a66eb99311abcL), MetaIdFactory.conceptId(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x2965545f70aa022aL)).seal();
 }

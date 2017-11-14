@@ -12,6 +12,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_TT_Base;
   private ConceptPresentation props_TT_Img;
   private ConceptPresentation props_TT_Import;
+  private ConceptPresentation props_TT_Line;
   private ConceptPresentation props_TT_Text;
   private ConceptPresentation props_TT_Tip;
 
@@ -41,11 +42,18 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_TT_Import = cpb.create();
         }
         return props_TT_Import;
-      case LanguageConceptSwitch.TT_Text:
-        if (props_TT_Text == null) {
+      case LanguageConceptSwitch.TT_Line:
+        if (props_TT_Line == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("plain text");
           cpb.rawPresentation("text");
+          props_TT_Line = cpb.create();
+        }
+        return props_TT_Line;
+      case LanguageConceptSwitch.TT_Text:
+        if (props_TT_Text == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
           props_TT_Text = cpb.create();
         }
         return props_TT_Text;

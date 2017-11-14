@@ -191,7 +191,7 @@ import jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteSmart;
     }
 
     public SNode createNodeToInsert(EditorContext editorContext) {
-      return NodeFactoryManager.createNode(MetaAdapterFactory.getConcept(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x3239547deb162856L, "TipsAndTricks.structure.TT_Text"), null, getNode(), getNode().getModel());
+      return NodeFactoryManager.createNode(MetaAdapterFactory.getConcept(0xff3ef7856efd437aL, 0xb0d5407497433041L, 0x2965545f70aa022aL, "TipsAndTricks.structure.TT_Text"), null, getNode(), getNode().getModel());
     }
     public EditorCell createNodeCell(SNode elementNode) {
       EditorCell elementCell = getUpdateSession().updateChildNodeCell(elementNode);

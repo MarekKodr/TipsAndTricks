@@ -2,13 +2,10 @@
 <debug-info version="2">
   <root nodeRef="r:2d11a2c3-0cbf-4389-ade0-df943ae20d45(TipsAndTricks.sandbox)/2445196759413259264">
     <file name="IdeTipsAndTricks.xml">
-      <unit id="2445196759413259264" at="1,0,72,14" name="TipsAndTricks.sandbox.IdeTipsAndTricks" />
+      <unit id="2445196759413259264" at="1,0,5,14" name="TipsAndTricks.sandbox.IdeTipsAndTricks" />
     </file>
-    <file name="Tips.html.xml">
-      <unit id="7763608953260125132" at="1,0,19,7" name="TipsAndTricks.sandbox.Tips$html" />
-    </file>
-    <file name="tip2.html.xml">
-      <unit id="7763608953260145038" at="1,0,14,7" name="TipsAndTricks.sandbox.tip2$html" />
+    <file name="null.html.xml">
+      <unit id="2982883097092065563" at="1,0,11,7" name="TipsAndTricks.sandbox.null$html" />
     </file>
   </root>
 </debug-info>

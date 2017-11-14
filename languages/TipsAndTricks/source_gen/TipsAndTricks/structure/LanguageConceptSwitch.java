@@ -12,15 +12,17 @@ public final class LanguageConceptSwitch {
   public static final int TT_Base = 0;
   public static final int TT_Img = 1;
   public static final int TT_Import = 2;
-  public static final int TT_Text = 3;
-  public static final int TT_Tip = 4;
+  public static final int TT_Line = 3;
+  public static final int TT_Text = 4;
+  public static final int TT_Tip = 5;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xff3ef7856efd437aL, 0xb0d5407497433041L);
     builder.put(0x21ef157f5ac36f60L, TT_Base);
     builder.put(0x21ef157f5ac37010L, TT_Img);
     builder.put(0xf5a66eb99311abcL, TT_Import);
-    builder.put(0x3239547deb162856L, TT_Text);
+    builder.put(0x3239547deb162856L, TT_Line);
+    builder.put(0x2965545f70aa022aL, TT_Text);
     builder.put(0x21ef157f5ac36f61L, TT_Tip);
     myIndex = builder.seal();
   }
